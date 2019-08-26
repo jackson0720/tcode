@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>T-Code 行业资讯</title>
+<style type="text/css">
+table a{
+color:white;
+}
+a:hover{
+color:lightblue;
+}
+.more{
+color:white;
+}
+.more:hover{
+color:#00495e;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<link href="css/circles.css" rel="stylesheet" type="text/css" media="all" /><!-- circles-css --><!-- for skills section-->
+<link rel="stylesheet" href="css/style1.css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> 
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/stylepic.css" rel="stylesheet"> 
+<!-- 导航栏div过渡 -->
+<link rel="stylesheet" type="text/css" href="css/div-transition.css"/>	
+	<!-- light-box -->
+	<link rel="stylesheet" href="css/poposlides.css">
+	<!-- //light-box -->
+<link rel="stylesheet" href="css/ul-menu.css">
+<!-- 分页 -->
+<link rel="stylesheet" type="text/css" href="css/zxf_page.css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/zxf_page.js"></script>
+
+	<!-- light-box -->
+	<link rel="stylesheet" href="css/poposlides.css">
+	<!-- //light-box -->
+<link rel="stylesheet" href="css/ul-menu.css">
+
+
+<!--fonts-->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+<!--//fonts-->
+
+</head>
+<body>
+<!-- banner -->
+		<div class="wthree_dao" style="background-image: url('images/timg-kj.jpg');position: relative; margin-top: -12px;">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header navbar-left" style="margin-top:-4vh;margin-left: -4vh;">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">T-Code</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1><a class="navbar-brand" href="index.html"><img src="images/logo.png" style="position:relative;bottom:13px;"></a></h1>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+
+				<div style="margin-left: 10px;" class="collapse navbar-collapse navbar-right"id="bs-example-navbar-collapse-1">
+					<nav class="link-effect-8" id="link-effect-8">
+						<ul class="nav navbar-nav" style="margin-left: auto;" id="info">
+							<li><a href="index.html">　首页　</a></li>
+							
+							<li><a href="technology.html" >　技术板块　</a>
+								<ul class="nav clearfix" style="display:none;">
+           							 <li><a href="technology.html#bc" style="color:white;">编程语言</a></li>
+            						 <li><a href="technology.html#web" style="color:white;">Web应用</a></li>
+           							 <li><a href="technology.html#yd" style="color:white;">移动开发</a></li>
+          							 <li><a href="technology.html#qy"   style="color:white;">企业应用</a></li>
+        						</ul>	
+							</li>
+							
+							<li><a href="sourcesquare.html">　开源广场　</a>
+								<ul class="nav clearfix" style="display:none;">
+									<li><a href="sourcesquare.html#kyxm"   style="color:white;">开源项目</a></li>
+									<li><a href="sourcesquare.html#kygs"   style="color:white;">开源公司</a></li>	
+            						<li><a href="sourcesquare.html#yyjz"   style="color:white;">优源巨作</a></li>           							 
+        						</ul>	
+							</li>
+							
+							<li  class="active"><a href="IT-software.html"  >　IT圈子　</a>
+								<ul class="nav clearfix" style="display:none;">
+            						 <li><a href="IT-software.html"   style="color:white;">软件更新</a></li>
+           							 <li><a href="IT-news.html"   style="color:white;">行业资讯</a></li>
+           							 <li><a href="IT-activity.html"   style="color:white;">活动版块</a></li>
+        						</ul>	
+							</li>
+							
+							<li><a href="developer.html"  >　开发者密室　</a>
+								<ul class="nav clearfix" style="display:none;">
+           							 <li><a href="developer.html#jsts"   style="color:white;">技术探索</a></li>
+            						 <li><a href="developer.html#kftl"   style="color:white;">开发讨论</a></li>
+           							 <li><a href="developer.html#mnbc"   style="color:white;">模拟编程</a></li>
+        						</ul>	
+							</li>
+							
+							<li><a href="knowledge.html"  >　付费源码　</a>
+								<ul class="nav clearfix" style="display:none;">
+       							<li><a href="buylist.html"   style="color:white;">已购源码</a></li>
+    							</ul>
+							</li>
+							
+							<li><a href="Feedback.html"  >反馈吐槽</a></li>
+
+						</ul>
+						<script type="text/javascript">
+								$(function(){
+									$.ajax({
+										url:'logins',
+										method:'post',
+										success:function(results){
+											//alert(results);
+											if(results == null){
+												$('#info').append(
+														'<li><a href="Login.html" >'+"注册/登录"+'</a></li>'
+													);
+											}else{
+												$('#info').append(
+														'<li id="userli"><a href="Personal-Center.html" >'+'当前用户：'+results.u_account+'</a>'+
+														'<ul id="usernav" class="nav clearfix" style="display:none;">'+
+												    	'<li><a href="safecenter.html" style="color:white;">安全中心</a></li>'+
+												    	'<li><a href="logout" style="color:white;">'+"退出"+'</a></li>'+
+												  		'</ul></li>'
+												)
+												$("#userli").hover(function(){
+												    $("#usernav").css("display","block");
+												},function(){
+													$("#usernav").css("display","none");
+												});
+											
+										}
+											
+										}
+									})
+								});
+							</script>
+					</nav>
+				</div>
+				<div class="agile_search">
+					<!-- cd-search -->
+					<div class="cd-main-header">
+						<ul class="cd-header-buttons">
+							<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
+						</ul>
+						<!-- cd-header-buttons -->
+					</div>
+					<div id="cd-search" class="cd-search agileinfo">
+						<form action="#" method="post">
+							<input name="Search" type="search" placeholder="请输入你要查找的内容">
+						</form>
+					</div>
+					<!-- //cd-search -->
+
+				</div>
+			</nav>
+		</div>
+<!-- /banner -->
+	<div class="renew" id="renew">
+		<div class="about">
+		<div class="container">
+			<h3 class="w3_head w3_head1">行业资讯</h3>
+		</div>
+		</div>
+		<div style="border-top: 5px solid #3B4867;">
+		<div class="container-fluid">
+					<div class="row-fluid">
+						<div class="span12">
+							<div class="tabbable tabs-left" id="tabs-638626">
+			<ul class="nav nav-tabs" style="margin-left: 120px;">
+				<li class="active">
+					<a href="#panel-124101" data-toggle="tab">综合资讯</a>
+				</li>
+				<li>
+					<a href="#panel-124102" data-toggle="tab">软件新讯</a>
+				</li>
+			</ul>
+								
+								<div class="tab-content">
+								<!-- 综合资讯 -->
+									<div class="tab-pane active" id="panel-124101">
+										<div style="width: 950px; height: 750px; border: 0px solid black;margin-left: 100px;">
+										<!-- 左上div -->
+											<div style="width: 470px; height: 350px; float: left; border-radius: 20px;margin:0px 3px;">
+												<img src="images/tencent_could.jpg"  style="width: 466px; height: 346px; margin:3px 3px;border-radius: 20px;">
+											</div>
+											<!-- 右上div -->
+											<div style="width: 470px; height: 350px;float: left; border-radius: 20px;background-color: #279891;">
+												<div style="margin:10px;"><b style="color: white;">企业资讯</b></div>
+												<!-- 资讯 -->											
+													<table border="0px" style="margin:10px 20px;">
+														<tr style="height: 35px;">
+															<td><a>腾讯物联网操作系统 TencentOS tiny 软件架构解析与实践</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>信通院扫出 Dubbo 7 个安全漏洞，乌龙</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>Go-pry —— Go 的交互式解释器 </a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>每日一博 | AI 怎么将人绑定到高德地图上?</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>欧盟修改规定，脱欧后英国人还可以注册 .eu 域名</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>码云推荐 | 音乐播放器/下载器 music-spider</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>微软官方上线 Python 教程，教你快速实践</a></td>
+														</tr>														
+														<tr style="height: 35px;">
+															<td><a>微软斥资 10 亿美元与 OpenAI 合作，构建 Azure AI</a></td>
+														</tr>
+													</table>
+													<div style="width: 100% ;margin-top: -10px;text-align: right;">
+														<a href="#" class="more">更多>>　</a>
+													</div>
+											</div>
+											
+											<div style="width: 470px; height: 350px; float: left; border-radius: 20px; margin: 3px 3px;background-color: #AD4015;">
+												<div style="margin:10px;"><b style="color: white;">热门资讯</b></div>
+												<!-- 资讯 -->											
+													<table border="0px" style="margin:10px 20px;">
+														<tr style="height: 35px;">
+															<td><a>PostgreSQL 荣获 2019 年 O'Reilly 终身成就奖</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>RedMonk 2019 年 6 月编程语言排行</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>微软对 Chromium 新贡献</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>umi —— 可插拔的企业级 react 应用框架</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>微软要用Rust了 | VS Code上的F12 | </a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>OctoSQL —— 支持同时处理多个数据源的 SQL 查询引擎</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>码云推荐 | 开源会议室预约小程序（含服务端代码）</a></td>
+														</tr>														
+														<tr style="height: 35px;">
+															<td><a>DeepFakes 伪造的照片能骗过你，但骗不过深度神经网络</a></td>
+														</tr>
+													</table>
+														<div style="width: 100% ;margin-top: -10px;text-align: right;">
+														<a href="#" class="more">更多>>　</a>
+													</div>
+											</div>
+											
+											<div style="width: 470px; height: 350px; float: left; border-radius: 20px;background-color: #0F6298;margin: 3px 0px;">
+												<div style="margin:10px;"><b style="color: white;">华夏资讯</b></div>
+												<!-- 资讯 -->											
+													<table border="0px" style="margin:10px 20px;">
+														<tr style="height: 35px;">
+															<td><a>华为回应美国封锁</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>租电启动大规模专利保护，涉及多个共享充电线品</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>优速快递董事长夫妻双双身亡 生前疑似发生争执</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>网易食堂将对员工收费 官司辟谣：仍将免费提供</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>知乎否认内测百科类产品 是知乎话题的简介</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>91岁李兆基宣布退休 两儿子正式接任</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>阿里巴巴发布数十款全新产品 将拿出10亿元扶持小型工作室</a></td>
+														</tr>														
+														<tr style="height: 35px;">
+															<td><a>QQ注销功能已上线 注销过程满满的都是回忆</a></td>
+														</tr>
+													</table>													
+													<div style="width: 100% ;margin-top: -10px;text-align: right;">
+														<a href="#" class="more">更多>>　</a>
+													</div>
+											</div>
+										</div>
+									</div>
+									
+								<!-- 软件新讯 -->
+									<div class="tab-pane" id="panel-124102">
+										<div style="width: 950px; height: 750px; border: 0px solid black;margin-left: 100px;">
+										<!-- 左上div -->
+											<div style="width: 470px; height: 350px; float: left; border-radius: 20px;margin:0px 3px;">
+													<img src="images/huawei1.jpg"  style="width: 465px; height: 343px; margin:3px 3px;border-radius: 20px;">
+											</div>
+											<!-- 右上div -->
+											<div style="width: 470px; height: 348px;float: left; border-radius: 20px;background-color: #a1387e;">
+												<div style="margin:10px;"><b style="color: white;">软件更新</b></div>
+												<!-- 资讯 -->											
+													<table border="0px" style="margin:10px 20px;">
+														<tr style="height: 35px;">
+															<td><a>Kube-OVN 0.6.0 发布，支持 IPv6，流量镜像及更多功能</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>jobs 1.0 发布，分布式任务调度平台</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>Poli 0.9.0 发布, 基于SQL的开源BI软件</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>WebStorm 2019.2 发布，更智能方便</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>Vulkan 1.1.116 发布，图形 API 规范</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>NetSurf 3.9 发布，轻量级跨平台 Web 浏览器</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>KDE Plasma 5.17.0 发布，简化网络 QR 代码的显示</a></td>
+														</tr>														
+														<tr style="height: 35px;">
+															<td><a>GNOME Shell + Mutter 3.33.4 发布</a></td>
+														</tr>
+													</table>
+													<div style="width: 100% ;margin-top: -10px;text-align: right;">
+														<a href="#" class="more">更多>>　</a>
+													</div>
+											</div>
+											
+											<div style="width: 470px; height: 350px; float: left; border-radius: 20px; margin: 0px 3px;background-color: #5c5735;">
+												<div style="margin:10px;"><b style="color: white;">国际资讯</b></div>
+												<!-- 资讯 -->											
+													<table border="0px" style="margin:10px 20px;">
+														<tr style="height: 35px;">
+															<td><a>Apache Commons VFS 2.4 发布，虚拟文件系统库</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>Linux Lab 发布 v0.2-rc1，以实际行动支持国产龙芯处理器</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>Redux Model Ts 4.1.0 发布，Redux 的面向对象封装</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>yue-library Greenwich.SR1.SR1 发布</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>PbootCMS V1.4.2 发布，免费 PHP 建站系统</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>imi v1.0.3 发布，重磅推出注解及代码的毫秒级热更新</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>HexoClient 1.2.9 发布，基于 Electron 的 Hexo 客户端</a></td>
+														</tr>														
+														<tr style="height: 35px;">
+															<td><a>IJPay 让支付触手可及，2.0.0 版本发布：重构项目</a></td>
+														</tr>
+													</table>
+													<div style="width: 100% ;margin-top: -10px;text-align: right;">
+														<a href="#" class="more">更多>>　</a>
+													</div>
+											</div>
+											
+											<div style="width: 470px; height: 350px; float: left; border-radius: 20px;background-color: #8F6298;margin-top:2px;">
+												<div style="margin:10px;"><b style="color: white;">热门资讯</b></div>
+												<!-- 资讯 -->											
+													<table border="0px" style="margin:10px 20px;">
+														<tr style="height: 35px;">
+															<td><a>PostgreSQL 荣获 2019 年 O'Reilly 终身成就奖</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>RedMonk 2019 年 6 月编程语言排行</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>微软对 Chromium 新贡献</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>umi —— 可插拔的企业级 react 应用框架</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>微软要用Rust了 | VS Code上的F12 | </a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>OctoSQL —— 支持同时处理多个数据源的 SQL 查询引擎</a></td>
+														</tr>
+														<tr style="height: 35px;">
+															<td><a>码云推荐 | 开源会议室预约小程序（含服务端代码）</a></td>
+														</tr>														
+														<tr style="height: 35px;">
+															<td><a>DeepFakes 伪造的照片能骗过你，但骗不过深度神经网络</a></td>
+														</tr>
+													</table>
+													<div style="width: 100% ;margin-top: -10px;text-align: right;">
+														<a href="#" class="more">更多>>　</a>
+													</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- Footer -->
+<div class="footer w3ls">
+	<div class="container">
+			<div class="ftr-menu">
+				 <ul>
+					<li><a class="scroll" href="#home">首页 </a></li>
+					<li><a class="scroll" href="#about">技术板块</a></li>
+					<li><a class="scroll" href="#services">开源广场</a></li>
+					<li><a class="scroll" href="#team">IT圈子</a></li>
+					<li><a class="scroll" href="#skills">版务委员会</a></li>
+					<li><a class="scroll" href="#pricing">付费知识</a></li>
+					<li><a class="scroll" href="#contact">开发者密室</a></li>
+				 </ul>
+			</div>
+			<div class="w3ls-social-icons-2">
+				<a class="wechat" href="#"><i class="fa fa-wechat"></i></a>
+				<a class="qq" href="#"><i class="fa fa-qq"></i></a>
+				<a class="weibo" href="#"><i class="fa fa-weibo"></i></a>
+				<a class="pinterest" href="#"><i class="fa fa-google-plus"></i></a>			
+				<a class="tumblr" href="#"><i class="fa fa-tumblr"></i></a>
+			</div>
+			<div class="logo-fo">
+				<h2><a href="index.html">T-CODE</a></h2>
+			</div>
+			<div class="clearfix"> </div>
+	</div>
+</div>
+<div class="copyrights">
+	<p>Copyright &copy; 2018.Sing Company All rights reserved.More Templates <a href="index.html" target="_blank" title="T-Code">T-Code</a> - Collect from <a href="index.html" title="opne" target="_blank">T-Code</a></p>
+</div>
+<!-- //Footer -->
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- ul-menu js -->
+<script type="text/javascript" src="js/ul-menu.js"></script>
+
+<!-- banner js -->
+<script src="js/search.js"></script>
+	<script src="js/poposlides.js">
+	</script>
+	<script>
+		$(".slides").poposlides();
+	</script>
+<!-- //banner js -->
+
+<!--pop-up-grid-->
+		<div id="popup">
+			<div id="small-dialog" class="mfp-hide">
+				<div class="signin-form profile">
+					<h3>登     录</h3>		
+					<div class="login-form">
+						<form action="#" method="post">
+							<input type="text" name="name" placeholder="用户名..." required="">
+							<input type="password" name="password" placeholder="密码..." required="">
+							<input type="submit" value="登   录">
+						</form>
+					</div>					
+				</div>
+				<div style="width: 10vw;height:3vh;">
+					<a href="#big-dialog" class="popup-with-zoom-anim" id="toRegister">
+						没有账号？去注册</a>
+				</div>
+			</div>
+		</div>				
+		<!--pop-up-grid-->
+		
+<!--pop-res-grid-->
+		<div id="popup">
+			<div id="big-dialog" class="mfp-hide">
+				<div class="signin-form profile">
+					<h3>注     册</h3>		
+					<div class="login-form">
+						<form action="#" method="post">
+							<input type="text" name="name" placeholder="用户名..." required="">
+							<input type="password" name="password" placeholder="密码..." required="">
+							<input type="password" name="password" placeholder="确认密码..." required="">
+							<input type="email" name="email" placeholder="电子邮箱..." required="">
+							<input type="text" name="phone" placeholder="手机号码..." required="">
+							<input type="submit" value="注   册">
+						</form>
+					</div>
+				</div>
+				<div style="width: 10vw;height:3vh;">
+					<a href="#small-dialog" class="popup-with-zoom-anim" id="toRegister">
+						已有账号？去登录</a>
+				</div>
+			</div>
+		</div>						
+		<!--pop-up-grid-->
+		
+		<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+																							
+		});
+		</script>
+		
+<!-- required-js-files-->
+							<link href="css/owl.carousel.css" rel="stylesheet">
+							    <script src="js/owl.carousel.js"></script>
+							        <script>
+							    $(document).ready(function() {
+							      $("#owl-demo").owlCarousel({
+							        items :3,
+									itemsDesktop : [768,2],
+									itemsDesktopSmall : [414,1],
+							        lazyLoad : true,
+							        autoPlay : true,
+							        navigation :true,
+									
+							        navigationText :  false,
+							        pagination : true,
+									
+							      });
+								  
+							    });
+							    </script>
+								 <!--//required-js-files-->
+
+
+<!-- /circle-->
+	 <script type="text/javascript" src="js/circles.js"></script>
+					         <script>
+								var colors = [
+										['none', '#fd9426'], ['#fafafa', '#fc3158'],['#fafafa', '#53d769'], ['#fafafa', '#147efb']
+									];
+								for (var i = 1; i <= 7; i++) {
+									var child = document.getElementById('circles-' + i),
+										percentage = 30 + (i * 10);
+										
+									Circles.create({
+										id:         child.id,
+										percentage: percentage,
+										radius:     80,
+										width:      13,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[i - 1]
+									});
+								}
+						
+				</script>
+	<!-- //circle -->
+
+<script src="js/SmoothScroll.min.js"></script>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+
+<!-- move to top-js-files -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+<!-- //move to top-js-files -->
+
+
+<script type="text/javascript" src="js/bootstrap.js"></script><!-- bootstrap js file -->
+
+</body>
+</html>

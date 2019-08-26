@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>购买成功</title>
+</head>
+
+<body>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- ul-menu js -->
+<script type="text/javascript" src="js/ul-menu.js"></script>
+<script>
+	$(function(){
+		$.ajax({
+			url:'addbuy',
+			method:'post',
+			success:function(result){
+				//alert(result);
+				alert("购买成功，稍后将回到首页");
+				window.location.href="index.html";
+			}
+		})
+	})
+	
+</script>
+</body>
+</html>

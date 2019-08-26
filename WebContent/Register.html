@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>T-Code 注册</title>
+<meta charset=utf-8>
+	<link rel="stylesheet" href="css/login-Reg.css">
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body style="background-image: url('images/body-bg.png');">
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- Logo -->
+<div style="width: 300px; height: 40px;margin-left: 40px;"><img src="images/logo.png"></div>
+<!-- 注册 -->
+	<div class=" divrow1">
+		<div style="border: 1px solid transparent;"><h2 class="logintxt">注册</h2></div>		
+	</div>
+	<div class="divrow2" style="border: 1px solid transparent;">
+	<form id="f1">
+		<table border="0" style="width:100%;height: 200px;margin:auto;">
+			<tr>
+				<td style="width: 58%;">
+				<center><input type="text" class="loginuser" id="account" maxlength="8" placeholder="请输入用户名 至少6个字符 至多8个" name="userName"><span id="tips"></span></center>
+				</td>
+				<td style="width: 42%;border-left:2px dashed #b2b2b2;"></td>
+			</tr>
+			<tr>
+				<td style="width: 58%;">
+				<center><input type="password" class="loginpwd" id="pwd" maxlength="12" placeholder="请输入密码,6-12位英文+数字" name="password"><span id="tips1"></span></center>
+				</td>
+				<td style="width: 42%;border-left:2px dashed #b2b2b2;"><center style="font-size:20px;">已有账号？</center></td>
+			</tr>
+			<tr>
+				<td style="width: 58%;">
+				<center><input type="password" class="loginpwd" id="pwd2" maxlength="12" placeholder="再输入一次重复密码" ><span id="tips2"></span></center>
+				</td>
+				<td style="width: 42%;border-left:2px dashed #b2b2b2;"><center><a href="Login.html" class="a-zhuce">立即登录</a></center></td>
+			</tr>
+			<tr>
+				<td style="width: 58%;">
+				<center><input type="text" class="loginpwd" id="email" maxlength="100" placeholder="电子邮箱" name="email"><span id="tips3"></span></center>
+				</td>
+				<td style="border-left:2px dashed #b2b2b2;"><center>您还可以用以下方式登录</center></td>
+			</tr>
+			<tr>
+				<td style="width: 58%;">
+				<center>
+					<input type="text" class="yzm" maxlength="4" placeholder="验证码" name="code">
+					<img id="code" src="getCode" onclick="javascript:location.reload();"/><br/><!-- 更新验证码图片 -->
+				 </center>
+				</td>
+				<td style="border-left:2px dashed #b2b2b2;">
+					<center>
+						<i class="fa fa-wechat"></i>&nbsp;&nbsp;
+						<i class="fa fa-qq"></i>&nbsp;&nbsp;
+						<i class="fa fa-weibo"></i>&nbsp;&nbsp;
+						<i class="fa fa-renren"></i>&nbsp;&nbsp;
+						<i class="fa fa-steam-square"></i>&nbsp;&nbsp;		
+					</center>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 58%;">
+					<center>
+						<div class="checkbox">
+	    					<label>
+	      						<input type="checkbox" id="checkboxSuccess" value="option1">
+	      							我已阅读并同意
+	    					</label>
+	    					<a href="#" class="pwdlost">服务条款</a>
+  						</div>
+  					</center>
+				</td>
+				<td style="border-left:2px dashed #b2b2b2;">
+					
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<center><input type="button" id="sub" class="btn btn-primary btn-lg btnsg" value="注册"/></center>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="height: 30px;">
+					
+				</td>
+			</tr>
+		</table>
+	</form>
+	</div>
+	
+	<script type="text/javascript">
+	$(function(){
+		$('#sub').on('click',function(){
+			$.ajax({
+				url:'register',
+				method:'post',
+				data:decodeURIComponent($('#f1').serialize(),true),
+				success:function(result){
+					if(result.code==200){
+						window.location.href="Login.html";
+					}else{
+						alert(result.message);
+					}
+					
+				}
+			});
+		});
+		$('#account').on('blur',function(){
+			var exp2=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,8}$/;
+			var name=$('#account').val();
+			if(name.length<6){
+				$('#tips').html('<span style="color:red">'+"字数不满足6位"+'</span>');
+				$('#account').focus();
+			}
+			else if(!name.match(exp2))
+			{
+				$('#tips').html('<span style="color:red">'+"禁止纯英文/数字"+'</span>');
+				$('#account').focus();
+					
+			}
+			else{
+				$('#tips').html('<span style="color:green">'+"符合要求√"+'</span>');
+			}
+		})
+		$('#pwd').on('blur',function(){
+			var exp2=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$/;
+			var name=$('#pwd').val();
+			if(name.length<6){
+				$('#tips1').html('<span style="color:red">'+"字数不满足8位"+'</span>');
+				$('#pwd').focus();
+			}
+			else if(!name.match(exp2))
+			{
+				$('#tips1').html('<span style="color:red">'+"禁止纯英文/数字"+'</span>');
+				$('#pwd').focus();
+			}
+			else{
+				$('#tips1').html('<span style="color:green">'+"符合要求√"+'</span>');
+			}
+		})
+		$('#pwd2').on('blur',function(){
+			//var exp2=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,12}$/;
+			var name1=$('#pwd2').val();
+			var name2=$('#pwd').val();
+			if(name1!=name2){
+				$('#tips2').html('<span style="color:red">'+"长度不一致"+'</span>');
+				$('#pwd2').focus();
+			}
+			else
+			{
+				$('#tips2').html('<span style="color:green">'+"符合要求√"+'</span>');
+			}
+		})
+		$('#email').on('blur',function(){
+			var exp2=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+			var name1=$('#email').val();
+			if(!name1.match(exp2)){
+				$('#tips3').html('<span style="color:red">'+"邮箱格式不对"+'</span>');
+				$('#email').focus();
+			}
+			else
+			{
+				$('#tips3').html('<span style="color:green">'+"符合要求√"+'</span>');
+			}
+		})
+		
+	})
+	</script>
+	<div class="foot" style="background-image: url('images/bg-foot.png');">
+		<center><div>
+				 T-Code(TC-China.org) | <a class="a-foot">关于我们</a> | <a class="a-foot">联系我们</a>| <a class="a-foot">@新浪微博</a> | <a class="a-foot">TC-CHINA</a><br>
+				 粤ICP备12009483号-3<br>
+				T-Code(TC-China.org)始终为开源尽自己的一份力量！
+				 
+			</div></center>
+	</div>
+</body>
+</html>

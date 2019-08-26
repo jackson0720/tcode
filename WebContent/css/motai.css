@@ -1,0 +1,295 @@
+/* 重置样式start */
+*{
+    margin: 0;
+    padding: 0;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+body{
+    color: #333333;
+}
+.w740{
+    width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+ul{
+    list-style: none;
+
+}
+ul li{
+    float: left;
+}
+a{
+    color: #333333;
+    text-decoration: none;
+}
+.on{
+    border-bottom: 2px solid transparent;
+
+}
+
+label{
+    color: #333333;
+    font-size: 14px;
+    margin-right: 15px;
+    display: inline-block;
+    width: 65px;
+    text-align: right;
+
+}
+input{
+    width: 260px;
+    height: 35px;
+    padding-left: 18px;
+}
+.clearfix{
+    display: block;
+    content: "";
+    clear: both;
+    overflow: hidden;
+    height: 0;
+}
+.mt10{
+    margin-top: 10px;
+
+}
+/* 重置样式end */
+
+#phone{
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    border: 1px solid rebeccapurple;
+}
+
+
+.none{
+    display: none;
+}
+
+
+
+
+ /* top start */
+ #out{
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     left: 0;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     background-color: rgba(0, 0, 0, 0.5);
+     display: none;
+
+ }
+ .modal{
+     width: 740px;
+     position: fixed;
+     top: 10%;
+     left:20%;
+
+ }
+ .modal_content header{
+     width: 740px;
+     height: 53px;
+     padding-top: 17px;
+     border-bottom: 1px solid #666666;
+     background-color: #fafafa;
+     line-height: 53px;
+     position: relative;
+ }
+ header .tab_wrapper{
+     width:600px;
+     margin: 0 auto;
+ }
+ header span{
+     display: inline-block;
+     height: 49px;
+     padding: 0 26px;
+     color: #999;
+     font-size: 18px;
+     line-height: 49px;
+     text-align: center;
+     cursor: pointer;
+ }
+ .close{
+    color: #b7b7b7;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+
+ }
+
+ /* top end */
+/* 充话费 start */
+.modal_body{
+    width: 740px;
+    height: 283px;
+    padding: 30px 0;
+}
+.modal_body form{
+    width: 587px;
+    height: 183px;
+    margin: 0 auto;
+}
+.common_ul{
+    display: inline-block;
+    vertical-align: -10px;
+    margin-top: 20px;
+    width: 500px;
+
+}
+.common_ul li a{
+    display: inline-block;
+    border: 1px solid #b7b7b7;
+    border-right: 1px solid transparent;
+    height:30px;
+    line-height: 30px;
+    padding: 0 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+
+}
+.common_ul .last{
+    border-right: 1px solid #b7b7b7;
+}
+.common_ul li a:hover{
+    border: 2px solid #ff7500;
+}
+.common_pic{
+    margin-top: 20px;
+    width: 500px;
+}
+.phone_price {
+    color: #ff7500;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+}
+#btn{
+    width: 100px;
+    height:40px;
+    margin-left: 80px;
+    margin-right: 20px;
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ff7500;
+}
+.common_btn a{
+    font-size: 12px;
+    color: #1A83D6;
+}
+.common_btn a:hover{
+    color: #ff7500;
+
+}
+.content{
+    display:none;
+}
+
+/* 充话费 end */
+/* 充流量 start */
+form .flow{
+    margin-top: 20px;
+
+}
+.flow .sell_price{
+    display: inline-block;
+    width: 265px; 
+    height: 72px;
+    border: 1px solid #b7b7b7;
+    /* line-height: 72px; */
+    vertical-align: middle;
+    border-radius: 5px;  
+}
+.flow .sell_price:hover{
+    border: 2px solid #ff7500;
+
+}
+.flow .sell_price a{
+
+    color: #666666;
+    font-size: 14px;
+}
+.flow_con{
+    padding:14px 0 14px 20px;
+    background-color: #fafafa;
+    width: 180px;
+}
+.flow_con a{
+    display: block;
+    width: auto;
+    height: 20px;
+}
+
+.flow_price{
+    display: inline-block;
+    padding-right: 10px;
+
+    width: 55px;
+    text-align: center;
+
+    height: 72px;
+    line-height: 72px;
+}
+
+/* 充流量 end */
+
+
+
+/* 充固话  start */
+.operator a{
+    display: inline-block;
+    width: 78px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    border:1px solid #b7b7b7;
+    margin-right: 15px;
+
+}
+.operator a:hover{
+    border:2px solid #ff7500;
+}
+.num{
+    margin-top: 20px;
+}
+.num_input{
+    display: inline-block;
+    border:1px solid #b7b7b7;  
+}
+.num input{
+    border: 0;
+    width: 178px;
+    outline: none;
+}
+.num input:nth-of-type(1){
+    width: 30px;
+}
+
+/* 充固话 end */
+/* 充宽带 start */
+select{
+    width: 100px;
+    height: 35px;
+
+}
+/* 充宽带 end */

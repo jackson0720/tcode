@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>个人资料</title>
+<style type="text/css">
+table a{
+color:white;
+}
+a:hover{
+color:lightblue;
+}
+.more{
+color:white;
+}
+.more:hover{
+color:#00495e;
+}
+.act{
+height: 50px;
+font-size: 16px;
+text-align: center;
+line-height: 40px;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+			
+<link href="css/circles.css" rel="stylesheet" type="text/css" media="all" /><!-- circles-css --><!-- for skills section-->
+		
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<!-- 分页 -->
+<link rel="stylesheet" type="text/css" href="css/zxf_page.css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/zxf_page.js"></script>
+
+<!-- 个人中心 -->
+<link rel="stylesheet" href="css/T-PersonalCenter.css">
+
+<!-- 上传图片 -->
+<script src="js/jquery.js"></script>
+<script src="js/upload.js"></script>
+
+<!-- 修改信息 -->
+
+<!-- light-box -->
+<link rel="stylesheet" href="css/poposlides.css">
+<!-- //light-box -->
+<link rel="stylesheet" href="css/ul-menu.css">
+
+
+<!--fonts-->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+<!--//fonts-->
+
+</head>
+<body>
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+<!-- ul-menu js -->
+<script type="text/javascript" src="js/ul-menu.js"></script>
+<!-- banner -->
+<div class="main_agileits">
+		<div class="agile_wthree_nav">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header navbar-left" style="margin-top:-4vh;margin-left: -4vh;">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		<span class="sr-only">T-Code</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+	<h1><a class="navbar-brand" href="index.html"><img src="images/logo.png" style="position:relative;bottom:13px;"></a></h1>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<script>
+
+</script>
+<div style="margin-left: 10px;" class="collapse navbar-collapse navbar-right"id="bs-example-navbar-collapse-1">
+<nav class="link-effect-8" id="link-effect-8">
+	<ul class="nav navbar-nav" style="margin-left: auto;" id="info">
+<li><a href="index.html">　首页　</a></li>
+<li><a href="technology.html" >　技术板块　</a>
+	<ul class="nav clearfix" style="display:none;">
+    							 <li><a href="#bc" style="color:white;">编程语言</a></li>
+     						 <li><a href="#web" style="color:white;">Web应用</a></li>
+    							 <li><a href="#yd" style="color:white;">移动开发</a></li>
+   							 <li><a href="#qy"   style="color:white;">企业应用</a></li>
+ 						</ul>	
+</li>
+
+<li><a href="sourcesquare.html">　开源广场　</a>
+	<ul class="nav clearfix" style="display:none;">
+		<li><a href="sourcesquare.html#kyxm"   style="color:white;">开源项目</a></li>
+		<li><a href="sourcesquare.html#kygs"   style="color:white;">开源公司</a></li>	
+     						<li><a href="sourcesquare.html#yyjz"   style="color:white;">优源巨作</a></li>           							 
+ 						</ul>	
+</li>
+
+<li><a href="IT-software.html"  >　IT圈子　</a>
+	<ul class="nav clearfix" style="display:none;">
+     						 <li><a href="IT-software.html"   style="color:white;">软件更新</a></li>
+    							 <li><a href="IT-news.html"   style="color:white;">行业资讯</a></li>
+    							 <li><a href="IT-activity.html"   style="color:white;">活动版块</a></li>
+ 						</ul>	
+</li>
+
+<li><a href="developer.html"  >　开发者密室　</a>
+	<ul class="nav clearfix" style="display:none;">
+    							 <li><a href="developer.html#jsts"   style="color:white;">技术探索</a></li>
+     						 <li><a href="developer.html#kftl"   style="color:white;">开发讨论</a></li>
+    							 <li><a href="developer.html#mnbc"   style="color:white;">模拟编程</a></li>
+  						</ul>	
+	</li>
+	
+	<li><a href="knowledge.html"  >　付费源码　</a></li>
+	
+	<li><a href="Feedback.html"  >反馈吐槽</a></li>
+</ul>
+<script type="text/javascript">
+				$(function(){
+					$.ajax({
+						url:'logins',
+						method:'post',
+						success:function(results){
+							//alert(results);
+							if(results == null){
+								$('#info').append(
+										'<li><a href="Login.html" >'+"注册/登录"+'</a></li>'
+									);
+							}else{
+								$('#info').append(
+									'<li><a href="Personal-Center.html" >'+results.u_account+'</a></li>'+
+									'<li><a href="logout" >'+"退出"+'</a></li>'
+								)
+							$('#addbtn').on('click',function(){
+								var frm=$('#f1').serialize();
+								frm=decodeURIComponent(frm,true);
+								$.ajax({
+									url:'addinfo?account='+results.u_account,
+									method:'post',
+									data:frm,
+									success:function(result){
+										alert("添加成功，积分+1500");
+										window.location.href = 'index.html';
+									}
+								});
+							});
+						}
+					}
+				})
+			});
+						
+					$('#job-update').on('change',function(){
+						var job = ($('#job-update').val());
+						document.getElementById('job').value = job;
+						});
+					$('#star-update').on('change',function(){
+						var star = ($('#star-update').val());
+						document.getElementById('star').value = star;
+						});
+					$('#date-update').on('blur',function(){
+						var date = ($('#date-update').val());
+						document.getElementById('time').value = date;
+						});
+					$('#sex-update').on('change',function(){
+						var sex = ($('#sex-update').val());
+						document.getElementById('sex').value = sex;
+						});
+					$('#time').on('blur',function(){
+						var time=getNowFormatDate();
+						document.getElementById('time').value = time;
+					})
+				function getNowFormatDate() {
+			        var date = new Date();
+			        var seperator1 = "-";
+			        var year = date.getFullYear();
+			        var month = date.getMonth() + 1;
+			        var strDate = date.getDate();
+			        if (month >= 1 && month <= 9) {
+			            month = "0" + month;
+			        }
+			        if (strDate >= 0 && strDate <= 9) {
+			            strDate = "0" + strDate;
+			        }
+			        var currentdate = year + seperator1 + month + seperator1 + strDate;
+			        return currentdate;
+			    }
+				
+			</script>
+	</nav>
+</div>
+<div class="agile_search">
+	<!-- cd-search -->
+<div class="cd-main-header">
+	<ul class="cd-header-buttons">
+		<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
+	</ul>
+	<!-- cd-header-buttons -->
+</div>
+<div id="cd-search" class="cd-search agileinfo">
+	<form action="#" method="post">
+		<input name="Search" type="search" placeholder="请输入你要查找的内容">
+	</form>
+</div>
+<!-- //cd-search -->
+
+		</div>
+	</nav>
+</div>
+<div class="s1" style="margin-top:100px;">
+	<h3>为所有开发者服务</h3>
+	<p>T-Code 最初是由一群热衷于编程的初学者于2012年中旬创造的。 本站最初的名字为 T-test。</p>
+	<p>如今，各个技能水平的开发者都可以在没有任何外部指导的情况下参与进来</p>
+	<p>为开源做出自己的贡献，同时也让更多的开发者进入这个大家庭</p>
+	<div class="w3-button">
+		<div class="w3ls-button">
+			<a href="#" class="hvr-shutter-out-vertical">Mail Us</a>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+
+</div>
+
+<div class="slides-box">
+	<ul class="slides">
+		<li style="background: url(images/banner4.jpg) center"></li>
+<li style="background: url(images/banner1.jpg)center"></li>
+<li style="background: url(images/banner3.jpg) center"></li>
+<li style="background: url(images/banner2.jpg)center"></li>
+			</ul>
+		</div>
+	</div>
+<div style="border:0px solid red;" id="show1">
+<div class="tab-pane" style="border: 0px solid red;">
+<div style="margin-left: 25px;">
+<h2 style="margin-left:540px;margin-top:40px;">编辑信息</h2>
+<!-- <a href="#panel-124101" data-toggle="tab" class="act" style="margin-left: 680px;font-size: 12px;">不想改了</a> -->
+</div>
+<form class="form-inline" id="f1" style="border:0px solid red;postion:relative;left:200px;">
+<!-- 用户名和手机号 -->
+<div class="update_row2">
+<div class="form-group update_row1_1">
+<label for="exampleInputName2">　　昵称</label>
+<input type="text" class="form-control" id="uname-update" maxlength="7" placeholder="昵称..." name="nick">
+</div>
+<div class="form-group">
+<label for="exampleInputEmail2">手机号码</label>
+<input type="text" class="form-control" id="phone-update" maxlength="11" placeholder="手机号码..." name="tel" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+</div>
+</div>
+<!-- 年龄/性别 -->
+<div class="update_row2">
+<div class="form-group">
+<label for="exampleInputEmail2" style="position:relative;left:95px;">　　性别</label>
+<select style="position:relative;left:95px;width:195px;"  id="sex-update" class="form-control">
+<option value="男">男</option><option value="女">女</option>
+</select>
+<label for="exampleInputEmail2" style="position:relative;left:155px;">　　证件号码</label>
+<input type="text" name="idcard" placeholder="身份证号码/证件号码..." class="form-control" id="idcard-update" style="position:relative;left:155px;"/>
+</div>
+</div>
+<!-- 星座/职位 -->
+<div class="update_row2">
+<div class="form-group update_row1_1">
+<label for="exampleInputName2">　　星座</label>
+<select id="star-update" class="form-control" style="position:relative;width:192px;">
+	<option value="白羊座">白羊座</option><option value="金牛座">金牛座</option>
+	<option value="双子座">双子座</option><option value="巨蟹座">巨蟹座</option>
+	<option value="狮子座">狮子座</option><option value="处女座">处女座</option>
+	<option value="天秤座">天秤座</option><option value="天蝎座">天蝎座</option>
+	<option value="射手座">射手座</option><option value="水瓶座">水瓶座</option>
+	<option value="双鱼座">双鱼座</option><option value="摩羯座">摩羯座</option>
+</select>
+</div>
+<div class="form-group" style="margin-left: 106px;">
+<label for="exampleInputEmail2" style="position:relative;right:105px;">社会职业</label>
+<select id="job-update" class="form-control" style="position:relative;right:105px;width:192px;">
+<option>计算机/互联网/通信</option><option>生产/工艺/制造</option>
+<option>医疗/护理/制药</option><option>金融/投资/保险</option>
+ <option>服务业/商业/个体经营</option><option>文化/广告/传媒</option>
+ <option>娱乐/艺术/表演</option><option>公务员/行政/事业单位</option>
+<option>教育/培训</option><option>学生</option><option>其他</option>
+</select>
+</div>
+</div>
+<!-- 电子邮箱 -->
+<div class="update_row2">
+<div class="form-group update_row1_1">
+<label for="exampleInputEmail1">电子邮箱</label>
+<input type="email" class="form-control" name="email" id="email-update" style="width: 195px;" maxlength="20" placeholder="电子邮箱...">
+<label for="exampleInputEmail1" style="position:relative;left:95px;">出生日期</label>
+<input type="date" class="form-control" name="birthday" id="date-update" style="width: 195px;position:relative;left:95px;" maxlength="20" placeholder="电子邮箱...">
+</div>
+</div>
+<!-- 微信/QQ -->
+<div class="update_row2">
+<div class="form-group update_row1_1">
+<label for="exampleInputName2">　微信号</label>
+<input type="text" class="form-control" name="wechat" id="wechat-update" maxlength="20" placeholder="微信号...">
+</div>
+<div class="form-group">
+<label for="exampleInputEmail2">　QQ号</label>
+<input type="email" class="form-control" name="qq" id="qq-update" maxlength="13" placeholder="QQ号...">
+</div>
+</div>
+<!-- 微博地址 -->
+<div class="update_row2">
+<div class="form-group update_row1_1">
+<label for="exampleInputEmail1">微博地址</label>
+<input type="email" class="form-control" name="weibo" id="weibo-update" style="width: 195px;" maxlength="20" placeholder="微博地址...">
+<label for="exampleInputEmail1" style="position:relative;left:95px;">真实姓名</label>
+<input type="text" style="position:relative;left:95px;" class="form-control" name="name" id="name-update" style="width: 195px;" maxlength="20" placeholder="真实姓名...">
+
+</div>
+</div>
+<!-- 擅长领域/毕业院校 -->
+<div class="update_row2">
+<div class="form-group update_row1_1">
+<label for="exampleInputName2">擅长领域</label>
+<input type="text" class="form-control" name="dev" id="hobby-update" maxlength="20" placeholder="擅长领域...(用、号隔开)">
+</div>
+<div class="form-group">
+<label for="exampleInputEmail2">毕业院校</label>
+<input type="email" class="form-control" id="school-update" placeholder="毕业院校..." name="university">
+</div>
+</div>
+<input type="hidden" id="star" name="star"/>
+<input type="hidden" id="job" name="job"/>
+<input type="hidden" id="sex" name="sex"/>
+<input type="hidden" id="time" name="time"/>
+<!-- 自我介绍 -->
+<div class="update_row2">
+<div class="form-group update_row1_1">
+<label for="exampleInputEmail1">自我介绍</label>
+<textarea id="content" name="remark" class="form-control" rows="3" style="width: 450px;" placeholder="(请用80个字简单的介绍下自己吧~)" maxlength="80">
+</textarea>
+<div style="margin-left: 60px;">还可以输入<span id="checklen">80</span>字</div>
+</div>											
+<script type="text/javascript"></script>
+</div>
+<!-- 提交按钮 -->
+<div style="margin-top: 15px;">
+<div class="form-group update_row1_1">
+<input type="button" class="btn btn-info" style="margin-left: 480px;" data-toggle="tab" value="提交" id="addbtn">
+</div>
+</div>
+</form>
+</div>
+<script type="text/javascript" src="js/T-PersonalCenter.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/zxf_page.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/upload.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	
+})
+</script>
+</div>
+
+<!-- Footer -->
+<div class="footer w3ls">
+	<div class="container">
+			<div class="ftr-menu">
+				 <ul>
+					<li><a class="scroll" href="#home">首页 </a></li>
+					<li><a class="scroll" href="#about">技术板块</a></li>
+					<li><a class="scroll" href="#services">开源广场</a></li>
+					<li><a class="scroll" href="#team">IT圈子</a></li>
+					<li><a class="scroll" href="#skills">版务委员会</a></li>
+					<li><a class="scroll" href="#pricing">付费知识</a></li>
+					<li><a class="scroll" href="#contact">开发者密室</a></li>
+				 </ul>
+			</div>
+			<div class="w3ls-social-icons-2">
+				<a class="wechat" href="#"><i class="fa fa-wechat"></i></a>
+				<a class="qq" href="#"><i class="fa fa-qq"></i></a>
+				<a class="weibo" href="#"><i class="fa fa-weibo"></i></a>
+				<a class="pinterest" href="#"><i class="fa fa-google-plus"></i></a>			
+				<a class="tumblr" href="#"><i class="fa fa-tumblr"></i></a>
+			</div>
+			<div class="logo-fo">
+				<h2><a href="index.html">T-CODE</a></h2>
+			</div>
+			<div class="clearfix"> </div>
+	</div>
+</div>
+<div class="copyrights">
+	<p>Copyright &copy; 2018.Sing Company All rights reserved.More Templates <a href="index.html" target="_blank" title="T-Code">T-Code</a> - Collect from <a href="index.html" title="opne" target="_blank">T-Code</a></p>
+</div>
+<!-- //Footer -->
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- ul-menu js -->
+<script type="text/javascript" src="js/ul-menu.js"></script>
+
+<!-- banner js -->
+<script src="js/search.js"></script>
+	<script src="js/poposlides.js">
+</script>
+<script>
+$(".slides").poposlides();
+</script>
+<!-- //banner js -->
+
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script>
+	$(document).ready(function() {
+		$('.popup-with-zoom-anim').magnificPopup({
+			type: 'inline',
+			fixedContentPos: false,
+			fixedBgPos: true,
+			overflowY: 'auto',
+			closeBtnInside: true,
+			preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in'
+	});
+																					
+});
+</script>
+
+<!-- required-js-files-->
+<link href="css/owl.carousel.css" rel="stylesheet">
+    <script src="js/owl.carousel.js"></script>
+        <script>
+    $(document).ready(function() {
+      $("#owl-demo").owlCarousel({
+        items :3,
+		itemsDesktop : [768,2],
+		itemsDesktopSmall : [414,1],
+        lazyLoad : true,
+        autoPlay : true,
+        navigation :true,
+		
+        navigationText :  false,
+        pagination : true,
+		
+      });
+	  
+    });
+    </script>
+	 <!--//required-js-files-->
+
+
+<!-- /circle-->
+<script type="text/javascript" src="js/circles.js"></script>
+			         <script>
+	var colors = [
+			['none', '#fd9426'], ['#fafafa', '#fc3158'],['#fafafa', '#53d769'], ['#fafafa', '#147efb']
+		];
+	for (var i = 1; i <= 7; i++) {
+		var child = document.getElementById('circles-' + i),
+			percentage = 30 + (i * 10);
+			
+		Circles.create({
+			id:         child.id,
+			percentage: percentage,
+			radius:     80,
+			width:      13,
+			number:   	percentage / 1,
+			text:       '%',
+			colors:     colors[i - 1]
+		});
+	}
+
+</script>
+<!-- //circle -->
+
+<script src="js/SmoothScroll.min.js"></script>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$(".scroll").click(function(event){		
+		event.preventDefault();
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+	});
+});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+$(document).ready(function() {
+	/*
+		var defaults = {
+		containerID: 'toTop', // fading element id
+		containerHoverID: 'toTopHover', // fading element hover id
+		scrollSpeed: 1200,
+		easingType: 'linear' 
+		};
+	*/
+						
+	$().UItoTop({ easingType: 'easeOutQuart' });
+						
+	});
+</script>
+
+<!-- move to top-js-files -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<!-- //move to top-js-files -->
+
+
+<script type="text/javascript" src="js/bootstrap.js"></script><!-- bootstrap js file -->
+
+</body>
+</html>

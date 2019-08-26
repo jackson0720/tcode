@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>购买成功</title>
+</head>
+
+<body>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- ul-menu js -->
+<script type="text/javascript" src="js/ul-menu.js"></script>
+<script>
+	$(function(){
+		$.ajax({
+			url:'addVip',
+			method:'post',
+			success:function(result){
+				alert("购买成功，稍后将回到付费源码板块");
+				
+				
+				
+			}
+		})
+	})
+	
+</script>
+</body>
+</html>

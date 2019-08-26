@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>T-Code 已购买源码</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<link href="css/circles.css" rel="stylesheet" type="text/css" media="all" /><!-- circles-css --><!-- for skills section-->
+<link rel="stylesheet" href="css/style1.css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> 
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/stylepic.css" rel="stylesheet"> 
+<!-- 导航栏div过渡 -->
+<link rel="stylesheet" type="text/css" href="css/div-transition.css"/>	
+	<!-- light-box -->
+	<link rel="stylesheet" href="css/poposlides.css">
+	<!-- //light-box -->
+<link rel="stylesheet" href="css/ul-menu.css">
+<!--fonts-->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+<!--//fonts-->
+<style type="text/css">
+	.cardBox {
+		width: 425px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		text-align: center;
+		float: left;
+		margin-right: 25px;
+		padding: 25px;
+		padding-top: 25px;
+		margin:17px;
+	}
+
+	.headerBox {
+		color: #fff;
+		padding: 10px;
+		font-size: 15px;
+		height: 60px;
+	}
+
+	.bodyBox {
+		padding: 10px;
+	}
+
+	.bodyBox p {
+		margin-left: 5px;
+	}
+</style>
+</head>
+<body>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script><!-- bootstrap js file -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- banner -->
+		<div class="wthree_dao" style="background-image: url('images/timg-kj.jpg');position: relative; margin-top: -12px;">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header navbar-left" style="margin-top:-4vh;margin-left: -4vh;">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">T-Code</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1><a class="navbar-brand" href="index.html"><img src="images/logo.png" style="position:relative;bottom:13px;"></a></h1>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+
+				<div style="margin-left: 10px;" class="collapse navbar-collapse navbar-right"id="bs-example-navbar-collapse-1">
+					<nav class="link-effect-8" id="link-effect-8">
+						<ul class="nav navbar-nav" style="margin-left: auto;" id="info">
+							<li><a href="index.html">　首页　</a></li>
+							
+							<li><a href="technology.html" >　技术板块　</a>
+								<ul class="nav clearfix" style="display:none;">
+           							 <li><a href="technology.html#bc" style="color:white;">编程语言</a></li>
+            						 <li><a href="technology.html#web" style="color:white;">Web应用</a></li>
+           							 <li><a href="technology.html#yd" style="color:white;">移动开发</a></li>
+          							 <li><a href="technology.html#qy"   style="color:white;">企业应用</a></li>
+        						</ul>	
+							</li>
+							
+							<li><a href="sourcesquare.html">　开源广场　</a>
+								<ul class="nav clearfix" style="display:none;">
+									<li><a href="sourcesquare.html#kyxm"   style="color:white;">开源项目</a></li>
+									<li><a href="sourcesquare.html#kygs"   style="color:white;">开源公司</a></li>	
+            						<li><a href="sourcesquare.html#yyjz"   style="color:white;">优源巨作</a></li>           							 
+        						</ul>	
+							</li>
+							
+							<li><a href="IT-software.html"  >　IT圈子　</a>
+								<ul class="nav clearfix" style="display:none;">
+            						 <li><a href="IT-software.html"   style="color:white;">软件更新</a></li>
+           							 <li><a href="IT-news.html"   style="color:white;">行业资讯</a></li>
+           							 <li><a href="IT-activity.html"   style="color:white;">活动版块</a></li>
+        						</ul>	
+							</li>
+							
+							<li><a href="developer.html"  >　开发者密室　</a>
+								<ul class="nav clearfix" style="display:none;">
+           							 <li><a href="developer.html#jsts"   style="color:white;">技术探索</a></li>
+            						 <li><a href="developer.html#kftl"   style="color:white;">开发讨论</a></li>
+           							 <li><a href="developer.html#mnbc"   style="color:white;">模拟编程</a></li>
+        						</ul>	
+							</li>
+							
+							<li class="active"><a href="knowledge.html"  >　付费源码　</a>
+								<ul class="nav clearfix" style="display:none;">
+           							 <li><a href="buylist.html"   style="color:white;">已购源码</a></li>
+        						</ul>
+							</li>
+							
+							<li><a href="Feedback.html"  >反馈吐槽</a></li>
+
+						</ul>
+						<script type="text/javascript">
+								$(function(){
+									$.ajax({
+										url:'logins',
+										method:'post',
+										success:function(results){
+											if(results == null){
+												$('#info').append(
+														'<li><a href="Login.html" >'+"注册/登录"+'</a></li>'
+													);
+												$('#tab').append(
+														'<h5>'+"您还未登录哦，快去登录吧！"+'</h5>'
+												)
+											}else{
+												$('#info').append(
+													'<li><a href="Personal-Center.html" >'+results.u_account+'</a></li>'+
+													'<li><a href="logout" >'+"退出"+'</a></li>'
+												)
+												$.ajax({
+													url:'listbuy?account='+results.u_account,
+													method:'get',
+													success:function(result){
+														if(result != null){
+															$('#tab tr:not(:first)').remove();
+															$.each(result,function(index,obj){
+																	$('#tab').append(
+																		"<tr>"+
+																		"<td>"+obj.bid+"</td>"+
+																		"<td>"+obj.borderid+"</td>"+
+																		"<td>"+obj.baccount+"</td>"+
+																		"<td>"+obj.btitle+"</td>"+
+																		"<td>"+obj.btext+"</td>"+
+																		"<td>"+obj.bprice+"</td>"+
+																		"</tr>"
+																)
+															});	
+														}else{
+															alert("空空如也？您还未进行过购买，快去购买吧！")
+														}
+														
+														
+													}
+												});
+														}
+											
+										}
+									})
+								})
+							</script>
+					</nav>
+				</div>
+				<div class="agile_search">
+					<!-- cd-search -->
+					<div class="cd-main-header">
+						<ul class="cd-header-buttons">
+							<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
+						</ul>
+						<!-- cd-header-buttons -->
+					</div>
+					<div id="cd-search" class="cd-search agileinfo">
+						<form action="#" method="post">
+							<input name="Search" type="search" placeholder="请输入你要查找的内容">
+						</form>
+					</div>
+					<!-- //cd-search -->
+
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- /banner -->
+    <div class="about">
+			<div class="container">
+                <h3 class="w3_head w3_head1">已购买源码</h3>
+                <p style="text-align: center;">你所购买的付费源码都可以在这里查看哦！</p>
+			</div>
+		</div>
+		<div id="divcardbox" style="border: 0px solid red;width:1000px;height:600px;position: relative;left: 187px;overflow: auto;">
+			<div class="col-md-12">
+				<table class="table table-striped table-bordered" id="tab" >
+					<tr class="active">
+						<th>编号</th>
+						<th>订单号</th>
+						<th>收货人</th>
+						<th>源码标题</th>
+						<th>源码简述</th>
+						<th>源码价格</th>
+					</tr>
+				</table>
+				<div id="page" align="center"></div>
+			</div>
+        </div>
+        
+
+		
+<!-- Footer -->
+<div class="footer w3ls">
+	<div class="container">
+			<div class="ftr-menu">
+				 <ul>
+					<li><a class="scroll" href="#home">首页 </a></li>
+					<li><a class="scroll" href="#about">技术板块</a></li>
+					<li><a class="scroll" href="#services">开源广场</a></li>
+					<li><a class="scroll" href="#team">IT圈子</a></li>
+					<li><a class="scroll" href="#skills">版务委员会</a></li>
+					<li><a class="scroll" href="#pricing">付费知识</a></li>
+					<li><a class="scroll" href="#contact">开发者密室</a></li>
+				 </ul>
+			</div>
+			<div class="w3ls-social-icons-2">
+				<a class="wechat" href="#"><i class="fa fa-wechat"></i></a>
+				<a class="qq" href="#"><i class="fa fa-qq"></i></a>
+				<a class="weibo" href="#"><i class="fa fa-weibo"></i></a>
+				<a class="pinterest" href="#"><i class="fa fa-google-plus"></i></a>			
+				<a class="tumblr" href="#"><i class="fa fa-tumblr"></i></a>
+			</div>
+			<div class="logo-fo">
+				<h2><a href="index.html">T-CODE</a></h2>
+			</div>
+			<div class="clearfix"> </div>
+	</div>
+</div>
+<div class="copyrights">
+	<p>Copyright &copy; 2018.Sing Company All rights reserved.More Templates <a href="index.html" target="_blank" title="T-Code">T-Code</a> - Collect from <a href="index.html" title="opne" target="_blank">T-Code</a></p>
+</div>
+<!-- //Footer -->
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- ul-menu js -->
+<script type="text/javascript" src="js/ul-menu.js"></script>
+
+<!-- banner js -->
+<script src="js/search.js"></script>
+	<script src="js/poposlides.js">
+	</script>
+	<script>
+		$(".slides").poposlides();
+	</script>
+<!-- //banner js -->
+
+		
+<!--pop-res-grid-->
+		
+		
+		<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+																							
+		});
+		</script>
+		
+<!-- required-js-files-->
+							<link href="css/owl.carousel.css" rel="stylesheet">
+							    <script src="js/owl.carousel.js"></script>
+							        <script>
+							    $(document).ready(function() {
+							      $("#owl-demo").owlCarousel({
+							        items :3,
+									itemsDesktop : [768,2],
+									itemsDesktopSmall : [414,1],
+							        lazyLoad : true,
+							        autoPlay : true,
+							        navigation :true,
+									
+							        navigationText :  false,
+							        pagination : true,
+									
+							      });
+								  
+							    });
+							    </script>
+								 <!--//required-js-files-->
+
+
+<!-- /circle-->
+	 <script type="text/javascript" src="js/circles.js"></script>
+					         <script>
+								var colors = [
+										['none', '#fd9426'], ['#fafafa', '#fc3158'],['#fafafa', '#53d769'], ['#fafafa', '#147efb']
+									];
+								for (var i = 1; i <= 7; i++) {
+									var child = document.getElementById('circles-' + i),
+										percentage = 30 + (i * 10);
+										
+									Circles.create({
+										id:         child.id,
+										percentage: percentage,
+										radius:     80,
+										width:      13,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[i - 1]
+									});
+								}
+						
+				</script>
+	<!-- //circle -->
+<script>
+$(function () {
+	
+});
+</script>
+
+
+
+<!-- start-smoth-scrolling -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- move to top-js-files -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+<!-- //move to top-js-files -->
+
+
+
+
+</body>
+</html>

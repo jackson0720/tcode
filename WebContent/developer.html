@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>T-Code 开发者密室</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<link href="css/circles.css" rel="stylesheet" type="text/css" media="all" /><!-- circles-css --><!-- for skills section-->
+<link rel="stylesheet" href="css/style1.css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> 
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/stylepic.css" rel="stylesheet"> 
+<!-- 导航栏div过渡 -->
+<link rel="stylesheet" type="text/css" href="css/div-transition.css"/>	
+	<!-- light-box -->
+	<link rel="stylesheet" href="css/poposlides.css">
+	<!-- //light-box -->
+<link rel="stylesheet" href="css/ul-menu.css">
+<!--fonts-->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+<!--//fonts-->
+<style type="text/css">
+	.cardBox {
+		width: 425px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		text-align: center;
+		float: left;
+		margin-right: 25px;
+		padding: 25px;
+		padding-top: 25px;
+		margin:17px;
+	}
+
+	.headerBox {
+		color: #fff;
+		padding: 10px;
+		font-size: 15px;
+		height: 60px;
+	}
+
+	.bodyBox {
+		padding: 10px;
+	}
+
+	.bodyBox p {
+		margin-left: 5px;
+	}
+</style>
+
+</head>
+<body>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+$("#formContenFrame").attr("src","https://www.mdeditor.com/");
+</script>
+<!-- banner -->
+		<div class="wthree_dao" style="background-image: url('images/timg-kj.jpg');position: relative; margin-top: -12px;">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header navbar-left" style="margin-top:-4vh;margin-left: -4vh;">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">T-Code</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1><a class="navbar-brand" href="index.html"><img src="images/logo.png" style="position:relative;bottom:13px;"></a></h1>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+
+				<div style="margin-left: 10px;" class="collapse navbar-collapse navbar-right"id="bs-example-navbar-collapse-1">
+					<nav class="link-effect-8" id="link-effect-8">
+						<ul class="nav navbar-nav" style="margin-left: auto;" id="info">
+							<li><a href="index.html">　首页　</a></li>
+							
+							<li><a href="technology.html" >　技术板块　</a>
+								<ul class="nav clearfix" style="display:none;">
+           							 <li><a href="technology.html#bc" style="color:white;">编程语言</a></li>
+            						 <li><a href="technology.html#web" style="color:white;">Web应用</a></li>
+           							 <li><a href="technology.html#yd" style="color:white;">移动开发</a></li>
+          							 <li><a href="technology.html#qy"   style="color:white;">企业应用</a></li>
+        						</ul>	
+							</li>
+							
+							<li><a href="sourcesquare.html">　开源广场　</a>
+								<ul class="nav clearfix" style="display:none;">
+									<li><a href="sourcesquare.html#kyxm"   style="color:white;">开源项目</a></li>
+									<li><a href="sourcesquare.html#kygs"   style="color:white;">开源公司</a></li>	
+            						<li><a href="sourcesquare.html#yyjz"   style="color:white;">优源巨作</a></li>           							 
+        						</ul>	
+							</li>
+							
+							<li><a href="IT-software.html"  >　IT圈子　</a>
+								<ul class="nav clearfix" style="display:none;">
+            						 <li><a href="IT-software.html"   style="color:white;">软件更新</a></li>
+           							 <li><a href="IT-news.html"   style="color:white;">行业资讯</a></li>
+           							 <li><a href="IT-activity.html"   style="color:white;">活动版块</a></li>
+        						</ul>	
+							</li>
+							
+							<li  class="active"><a href="developer.html"  >　开发者密室　</a>
+								<ul class="nav clearfix" style="display:none;">
+           							 <li><a href="#jsts"   style="color:white;">技术探索</a></li>
+            						 <li><a href="#kftl"   style="color:white;">开发讨论</a></li>
+           							 <li><a href="#mnbc"   style="color:white;">模拟编程</a></li>
+        						</ul>	
+							</li>
+							
+							<li><a href="knowledge.html"  >　付费源码　</a>
+								<ul class="nav clearfix" style="display:none;">
+       							<li><a href="buylist.html"   style="color:white;">已购源码</a></li>
+    							</ul>
+							</li>
+							
+							<li><a href="Feedback.html"  >反馈吐槽</a></li>
+
+						</ul>
+						<script type="text/javascript">
+								$(function(){
+									$.ajax({
+										url:'logins',
+										method:'post',
+										success:function(results){
+											//alert(results);
+											if(results == null){
+												$('#info').append(
+														'<li><a href="Login.html" >'+"注册/登录"+'</a></li>'
+													);
+											}else{
+												$('#info').append(
+														'<li id="userli"><a href="Personal-Center.html" >'+'当前用户：'+results.u_account+'</a>'+
+														'<ul id="usernav" class="nav clearfix" style="display:none;">'+
+												    	'<li><a href="safecenter.html" style="color:white;">安全中心</a></li>'+
+												    	'<li><a href="logout" style="color:white;">'+"退出"+'</a></li>'+
+												  		'</ul></li>'
+												)
+												$("#userli").hover(function(){
+												    $("#usernav").css("display","block");
+												},function(){
+													$("#usernav").css("display","none");
+												});
+											
+										}
+									}
+									});
+								});
+							</script>
+					</nav>
+				</div>
+				<div class="agile_search">
+					<!-- cd-search -->
+					<div class="cd-main-header">
+						<ul class="cd-header-buttons">
+							<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
+						</ul>
+						<!-- cd-header-buttons -->
+					</div>
+					<div id="cd-search" class="cd-search agileinfo">
+						<form action="#" method="post">
+							<input name="Search" type="search" placeholder="请输入你要查找的内容">
+						</form>
+					</div>
+					<!-- //cd-search -->
+
+				</div>
+			</nav>
+		</div>
+	<!-- /banner -->
+    <div class="about">
+			<div class="container">
+                <h3 class="w3_head w3_head1" id="jsts">技术探索</h3>
+                <p style="text-align: center;">技术探索中心，顾名思义是让有能力的开发者或开发组织进行对本站即将上线的新功能<br>
+			    进行完善以及提出建议和Debug新功能的源码，因此申请的审核非常严格，<br>一是对新功能以后上线的稳定性负责，二是可以让开发者们得到好的锻炼</p>
+			</div>
+		</div>
+		<div style="border: 0px solid red;width:1000px;height:600px;position: relative;left: 187px;overflow: auto;">
+			<div class="cardBox">
+				<div class="headerBox" style="background-color: #5BC0DE;">
+					<p>
+						<a title="查看详情" style="cursor: pointer; color:white" onclick="">在线调试程序(Alpha)</a><br>
+						<a title="申请人数" style="cursor: pointer; color:white" onclick="">申请人数：122</a>
+					</p>
+				</div>
+				<div class="bodyBox">
+					<p>面向对象：<a href="#">本站注册的开发者</a></p>
+					<p>主要职责：参与完善在线调试程序（Beta）的功能并进行Debug</p>
+					<p>招募状态：
+						<a href="javascript:void(0)" class="label label-danger" style="border-radius: .25em;">招募完成</a>
+					</p>
+					<p>项目介绍：1、方便开发者在网上即可调试编写的程序，省去调用本地的开发工具进行调试。<br>
+                        2、目前仅支持JAVA和PHP，.Net正在争取与微软达成合作。<br>
+                        3、本功能上线后将会与模拟编程环境合并，在编写完源码后可以进行在线的调试。<br>
+                    </p>
+					<p>截止招募时间：2019-7-20</p>
+				</div>
+            </div>
+            <div class="cardBox">
+                    <div class="headerBox" style="background-color: #5BC0DE;">
+                        <p>
+                            <a title="查看详情" style="cursor: pointer; color:white" onclick="">在线调试程序(Beta)</a><br>
+                            <a title="申请人数" style="cursor: pointer; color:white" onclick="">申请人数：22</a>
+                        </p>
+                    </div>
+                    <div class="bodyBox">
+                        <p>面向对象：<a href="#">本站注册的开发者</a></p>
+                        <p>主要职责：参与完善第二期在线调试程序（Beta）的功能并进行Debug</p>
+                        <p>招募状态：
+                            <a href="javascript:void(0)" class="label label-info" style="border-radius: .25em;">招募中</a>
+                        </p>
+                        <p>项目介绍：1、方便开发者在网上即可调试编写的程序，省去调用本地的开发工具进行调试。<br>
+                            2、目前仅支持JAVA和PHP、Net。<br>
+                            3、本功能上线后将会与模拟编程环境合并，在编写完源码后可以进行在线的调试。<br>
+                            4、经过各位的努力，第一期的版本已经完成了，请下载第一期的版本进行体验和使用。<a href="#">点我下载</a><br>
+                            第二期招募已开始，请踊跃参与开发和调试吧！
+                        </p>
+                        <p>截止招募时间：2019-10-20</p>
+                    </div>
+                </div>
+        </div>
+        <div class="about">
+                <div class="container">
+                    <h3 class="w3_head w3_head1" id="kftl">开发讨论</h3>
+                    <p style="text-align: center;">这里有着本站注册的开发哥哥和开发姐姐们，在这里可以一起讨论编程技术哦！<br>
+                    无论你是开发大拿还是开发初学者，<br>在这里你都能畅谈编程技术</p>
+                </div>
+        </div>
+        <div style="border: 0px solid red;width:1000px;height:600px;position: relative;left: 187px;overflow: auto;" id="show">
+                <script>
+			$(function(){
+					$.ajax({
+						url:'list_Dev',
+						method:'get',
+						success:function(result){
+							$.each(result,function(index,obj){
+								$('#show').append('<div class="cardBox">'+
+									'<div class="headerBox" style="background-color: #5BC0DE;">'+
+									'<p>'+
+									'<a title="查看详情" style="cursor: pointer; color:white" href="view_posts?pid='+obj.p_pid+'">'+obj.p_ptheme+'</a><br>'+
+									'<a title="浏览数量" style="cursor: pointer; color:white" onclick="">点赞数：'+obj.p_pgood+'</a>'+
+									'</p>'+
+									'</div>'+
+									'<div class="bodyBox">'+
+									'<p>发 帖 人：'+'<a href="#">'+obj.p_paccount+'</a></p>'+
+									'<p>帖子ID：'+obj.p_pid+'</p>'+
+									'<p>所属板块：<a href="#">'+obj.p_pplate+'</a></p>'+
+									'<p>发帖时间：'+obj.p_ptime+'</p>'+
+									'</div>'+
+									'</div>');
+							});
+						}
+					});
+			})
+		</script>
+        </div>
+        <div class="about">
+				<div class="container">
+					<h3 class="w3_head w3_head1" id="mnbc">模拟编程</h3>
+					<p style="text-align: center;">方便开发者在线模拟编程，目前仅支持HTML5/CSS3/JavaScript/jQuery<br>
+					感谢JQuery插件库的开源</p>
+				</div>
+			</div>
+		<div style="border: 0px solid red;width:100%;height:800px;overflow: auto;">
+				<iframe id="api_iframe_51240" name="api_iframe_51240" src="" width="100%" height="800" scrolling="no" frameborder="0"></iframe>
+				<script type="text/javascript">
+				document.getElementById("api_iframe_51240").src = "https://www.jq22.com/webide/";
+				</script>
+		</div>
+<div class="subscribe">
+	<div class="container">
+		<div class="tittle-agileinfo">
+			<h3 class="w3_head w3_head1">邮箱订阅</h3>
+			<p class="toppara">如果您觉得我们站内内容优质，有非常不错的技术，
+			让您有非常好的学习提升与学习体验的话，不妨在下方留下您的邮箱，
+			订阅我们的频道，我们会不定期推送更多精彩内容</p>
+		</div>
+				<div class="w3-agile-subscribe">
+					<form action="#" method="post">
+						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="请输入您的电子邮箱..." required="">
+						<input type="submit" value="订	阅">
+					</form>
+					<h5>OR</h5>
+					<div class="agileinfo-social-grids">
+						<ul>
+							<li><a href="#"><i class="fa fa-wechat"></i></a></li>
+							<li><a href="#"><i class="fa fa-qq"></i></a></li>
+							<li><a href="#"><i class="fa fa-weibo"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+						</ul>
+					</div>
+				</div>
+	</div>
+</div>
+<!-- //subscribe -->
+
+<!-- contact -->
+<div id="contact" class="contact">
+	<div class="container">
+		<div class="tittle-agileinfo">
+			<h3 class="w3_head w3_head1">联系我们</h3>
+			<p class="toppara">如果您真心喜欢我们，想要加入我们，
+			或者对我们有什么意见，可以通过下方信息联系我们</p>
+		</div>
+		<iframe src=""></iframe>
+		<div class="contactimain" style="margin-top:-380px;">
+			<div class="col-md-6 contact-left">
+				<form action="#" method="post">
+					<div class="wthree_contact_left_grid">
+						<input type="text" name="Name" placeholder="姓名..." required="">
+						<input type="email" name="Email" placeholder="邮箱..." required="">
+						<input type="text" name="Telephone" placeholder="电话..." required="">
+						<input type="text" name="Subject" placeholder="爱好..." required="">
+						<textarea name="Message" placeholder="简介..." required></textarea>
+						<input type="submit" value="提交">
+					</div>
+					<div class="clearfix"> </div>
+				</form>
+			</div>
+			<div class="col-md-6 contact-right">
+				<div class="agile_info_mail_img_info">
+					<div class="address-grid">
+						<h4>Contact <span>Info</span></h4>
+						<p class="contacttext">Aliquam id quam pulvinar lectus aliquam rhoncus. In tristique nibh eget 
+						lorem cursus hendrerit. Suspendisse quis leo ac.</p>
+						<div class="mail-agileits-w3layouts">
+							<div class="contacticon">
+								<i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+							</div>
+							<div class="contact-right-inner">
+								<p>电话号码： </p><span>+86 (0756)860-70-19</span>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="mail-agileits-w3layouts">
+							<div class="contacticon">
+								<i class="fa fa-envelope-o" aria-hidden="true"></i>
+							</div>
+							<div class="contact-right-inner">
+								<p>电子邮箱： </p><a href="mailto:info@example.com">1433873tcode@example.com</a>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="mail-agileits-w3layouts">
+							<div class="contacticon">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+							</div>
+							<div class="contact-right-inner">
+								<p>公司地址</p><span>珠海市斗门区白蕉镇白蕉南路28号Sing有限公司</span>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!-- //contact -->
+
+<!-- Footer -->
+<div class="footer w3ls">
+	<div class="container">
+			<div class="ftr-menu">
+				 <ul>
+					<li><a   href="#home">首页 </a></li>
+					<li><a   href="#about">技术板块</a></li>
+					<li><a   href="#services">开源广场</a></li>
+					<li><a   href="#team">IT圈子</a></li>
+					<li><a   href="#skills">版务委员会</a></li>
+					<li><a   href="#pricing">付费知识</a></li>
+					<li><a   href="#contact">开发者密室</a></li>
+				 </ul>
+			</div>
+			<div class="w3ls-social-icons-2">
+				<a class="wechat" href="#"><i class="fa fa-wechat"></i></a>
+				<a class="qq" href="#"><i class="fa fa-qq"></i></a>
+				<a class="weibo" href="#"><i class="fa fa-weibo"></i></a>
+				<a class="pinterest" href="#"><i class="fa fa-google-plus"></i></a>			
+				<a class="tumblr" href="#"><i class="fa fa-tumblr"></i></a>
+			</div>
+			<div class="logo-fo">
+				<h2><a href="index.html">T-CODE</a></h2>
+			</div>
+			<div class="clearfix"> </div>
+	</div>
+</div>
+
+<div class="copyrights">
+	<p>Copyright &copy; 2018.Sing Company All rights reserved.More Templates <a href="index.html" target="_blank" title="T-Code">T-Code</a> - Collect from <a href="index.html" title="opne" target="_blank">T-Code</a></p>
+</div>
+<!-- //Footer -->
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- ul-menu js -->
+<script type="text/javascript" src="js/ul-menu.js"></script>
+
+<!-- banner js -->
+<script src="js/search.js"></script>
+	<script src="js/poposlides.js">
+	</script>
+	<script>
+		$(".slides").poposlides();
+	</script>
+<!-- //banner js -->
+
+<!--pop-up-grid-->
+		<div id="popup">
+			<div id="small-dialog" class="mfp-hide">
+				<div class="signin-form profile">
+					<h3>登     录</h3>		
+					<div class="login-form">
+						<form action="#" method="post">
+							<input type="text" name="name" placeholder="用户名..." required="">
+							<input type="password" name="password" placeholder="密码..." required="">
+							<input type="submit" value="登   录">
+						</form>
+					</div>					
+				</div>
+				<div style="width: 57vw;height:3vh;position: relative;bottom: 7px;">
+					<a href="#big-dialog" class="popup-with-zoom-anim" id="toRegister">
+						没有账号？去注册</a>
+					<a href="#big-dialog" class="popup-with-zoom-anim" id="toRegister">
+						忘记密码？</a>
+				</div>
+			</div>
+		</div>				
+		<!--pop-up-grid-->
+		
+<!--pop-res-grid-->
+		<div id="popup">
+			<div id="big-dialog" class="mfp-hide">
+				<div class="signin-form profile">
+					<h3>注     册</h3>		
+					<div class="login-form">
+						<form action="#" method="post">
+							<input type="text" name="name" placeholder="用户名..." required="">
+							<input type="password" name="password" placeholder="密码..." required="">
+							<input type="password" name="password" placeholder="确认密码..." required="">
+							<input type="email" name="email" placeholder="电子邮箱..." required="">
+							<input type="text" name="code" placeholder="验证码..." required="">
+							<input type="submit" value="注   册">
+						</form>
+					</div>
+				</div>
+				<div style="width: 62vw;height:3vh;position: relative;bottom: 7px;">
+					<a href="#small-dialog" class="popup-with-zoom-anim" id="toRegister">
+						已有账号？去登录</a>
+				</div>
+			</div>
+		</div>						
+		<!--pop-up-grid-->
+		
+		<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+																							
+		});
+		</script>
+		
+<!-- required-js-files-->
+							<link href="css/owl.carousel.css" rel="stylesheet">
+							    <script src="js/owl.carousel.js"></script>
+							        <script>
+							    $(document).ready(function() {
+							      $("#owl-demo").owlCarousel({
+							        items :3,
+									itemsDesktop : [768,2],
+									itemsDesktopSmall : [414,1],
+							        lazyLoad : true,
+							        autoPlay : true,
+							        navigation :true,
+									
+							        navigationText :  false,
+							        pagination : true,
+									
+							      });
+								  
+							    });
+							    </script>
+								 <!--//required-js-files-->
+
+
+<!-- /circle-->
+	 <script type="text/javascript" src="js/circles.js"></script>
+					         <script>
+								var colors = [
+										['none', '#fd9426'], ['#fafafa', '#fc3158'],['#fafafa', '#53d769'], ['#fafafa', '#147efb']
+									];
+								for (var i = 1; i <= 7; i++) {
+									var child = document.getElementById('circles-' + i),
+										percentage = 30 + (i * 10);
+										
+									Circles.create({
+										id:         child.id,
+										percentage: percentage,
+										radius:     80,
+										width:      13,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[i - 1]
+									});
+								}
+						
+				</script>
+	<!-- //circle -->
+
+<script src="js/SmoothScroll.min.js"></script>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+
+<!-- move to top-js-files -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+<!-- //move to top-js-files -->
+
+
+<script type="text/javascript" src="js/bootstrap.js"></script><!-- bootstrap js file -->
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+  <head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.1</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" /> -->
+    <link rel="stylesheet" href="css/font.css">
+	<link rel="stylesheet" href="css/xadmin.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/pagination.css"> 
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/xadmin.js"></script>
+    <script type="text/javascript" src="js/cookie.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.pagination.js"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+   
+    <div class="x-nav">
+      <span class="layui-breadcrumb">
+        <a href="javascript:void(0)">首页</a>
+        <a href="javascript:void()">演示</a>
+        <a>
+          <cite>导航元素</cite></a>
+      </span>
+      <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+    </div>
+    <div class="x-body">
+      <div class="layui-row">
+        <form class="layui-form layui-col-md12 x-so">
+         
+          <input type="text" id="username"  placeholder="请输入查询的账号" autocomplete="off" class="layui-input">
+          <input id="btn_Query" value="查询" class="layui-btn"/> 
+        </form>
+      </div>
+      <xblock>
+        <button class="layui-btn layui-btn-danger"  ><i class="layui-icon"></i>批量删除</button>
+ 
+        <span class="x-right" style="line-height:40px" id="count">共有数据：<span id="pageCount"></span> 条</span>
+      </xblock>
+      <table class="table table-striped table-bordered table-hover">
+      	<thead>
+          <tr>
+            <th>
+              <div id="checkbox" class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
+            </th>
+            <th>账号</th>
+            <th>用户邮箱</th>
+            <th>注册时间	</th>
+            <th>状态</th>
+            <th>出生日期</th>
+            <th>姓名 </th>
+            <th>星座</th>
+            <th>手机</th>
+           	<th>身份证</th>
+            <th>毕业院校</th>
+            <th>操作</th>
+         </tr>
+         </thead>
+         <tbody id="t1" class="">
+         
+         </tbody>
+      </table>
+ 
+ <div class="row">
+	<div class="col-md-12">
+		<!-- 分页控件 -->
+		<div id="page" align="right"></div>
+	</div>
+</div>	
+
+    </div>
+    <script>
+    $(function(){
+    	ajax();
+    	function ajax(){
+    	
+    		 $.ajax({
+ 	    		url:'listUsers?pageNum=1&pageSize=5',
+ 	    		method:'post',
+ 	    		success:function(result){
+ 	    			 
+ 	    			listUsers(result);
+ 	    			//分页
+ 	    			page(result);
+ 	    		
+ 	    		}
+ 	    	 });	
+    	}
+     
+    	/*根据账号查询*/
+	       $('#btn_Query').on('click',function(){
+	    	   var txtname=$('#username').val();
+	    	  	if(txtname==""||txtname==null){
+	    	  		ajax();
+	    	  	}else{
+	    	  	  $.ajax({
+	 	    		  url:'userByname?txtname='+txtname+'',
+	 	    		  method:'get',
+	 	    		  success:function(result){
+	 	    			  listUserByName(result);
+	 	    		  }
+	 	    	   });
+	    	  	}    	 
+	       });
+    		function listUserByName(result){
+    			$('#t1').empty();
+    			var state = result.data.u_state==1?"已启用":"已停用";
+    			$('#t1').append(
+ 					   '<tr>'
+ 					  +'<td><div id="checkbox" class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div></td>'
+  			           +'<td id="name">'+result.data.u_account+'</td>'
+  			           +'<td>'+result.data.u_email+'</td>'
+  			           +'<td>'+result.data.u_regtime+'</td>'
+  			           +'<td class="td-status"><span class="layui-btn layui-btn-normal layui-btn-mini" id="cclick" title="'+state+'">'+state+'</span></td>'
+  			           +'<td>'+result.data.u_birthday+'</td>'
+  			           +'<td>'+result.data.u_name+'</td>'
+  			           +'<td>'+result.data.u_constellation+'</td>'
+  			           +'<td>'+result.data.u_tel+'</td>'
+  			           +'<td>'+result.data.u_idcard+'</td>'
+  			           +'<td>'+result.data.u_university+'</td>'
+  			         
+  			           +'<td class="td-manage">' 
+  			              +'<a title="删除" id="delete"  href="javascript:;">'
+  			               +'<i class="layui-icon">&#xe640;</i>'
+  			             +'</a>' 
+  			           +'</td>' 
+  			         +'</tr>'
+ 				);
+    		
+    			if(state == '已停用'){
+	    			$('#cclick').addClass('layui-btn-disabled').html('已停用');	
+    			}
+    			$('#cclick').on('click',function(){
+   	             var name = $('#name').html();
+   	           
+   	    	   layer.confirm('确认要更改状态吗？',function(index){
+   	    		   if($('#cclick').attr('title')=='已启用'){
+   	    			   $.ajax({
+		    	            	 url:'updateUsers?state=0&name='+name+'',
+		    	            	 method:'get',
+		    	              });
+	    	                //发异步把用户状态进行更改
+	    	                $('#cclick').attr('title','已停用');
+
+	    	                $('#cclick').parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
+	    	                layer.msg('已停用!',{icon: 5,time:1000});
+	    	              
+	
+	    	              }else{
+	    	                $('#cclick').attr('title','已启用')
+
+	    	                $('#cclick').parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
+	    	                layer.msg('已启用!',{icon: 6,time:1000});
+	    	                $.ajax({
+		    	            	 url:'updateUsers?state=1&name='+name,
+		    	            	 method:'get',
+		    	              });
+	    	              }
+   	    	   })
+   	    	
+   	       })
+    			$('#delete').on('click',function(){
+	    	    	   var name = $('#name').html();
+						
+	    	    	   layer.confirm('确认要删除吗？',function(index){
+		    	              layer.msg('已删除!',{icon:1,time:1000});
+		    	    		$.ajax({
+		    	    			url:'deleteUser?name='+name+'',
+		    	    			method:'get',
+		    	    			success:function(){
+		    	    				ajax();
+		    	    			}
+		    	    		})
+		    	          });
+	    	  		  })
+    		}
+	    	 function listUsers(result){    		 
+	    		 $('#t1').empty();
+	    		 $.each(result.list,function(index,obj){
+	    		    var state = obj.u_state==1?"已启用":"已停用";
+	    			var i=index++;
+	    			$('#t1').append(
+	    					   '<tr>'
+	    					  +'<td><div id="checkbox" class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div></td>'
+	     			           +'<td id="name'+i+'">'+obj.u_account+'</td>'
+	     			           +'<td>'+obj.u_email+'</td>'
+	     			           +'<td>'+obj.u_regtime+'</td>'
+	     			           +'<td class="td-status"><span class="layui-btn layui-btn-normal layui-btn-mini" id="cclick'+i+'" title="'+state+'">'+state+'</span></td>'
+	     			           +'<td>'+obj.u_regtime+'</td>'
+	     			           +'<td>'+obj.u_name+'</td>'
+	     			           +'<td>'+obj.u_constellation+'</td>'
+	     			           +'<td>'+obj.u_tel+'</td>'
+	     			           +'<td>'+obj.u_idcard+'</td>'
+	     			           +'<td>'+obj.u_university+'</td>' 			         
+	     			           +'<td class="td-manage">' 
+	     			              +'<a title="删除" id="delete'+i+'"  href="javascript:;">'
+	     			               +'<i class="layui-icon">&#xe640;</i>'
+	     			             +'</a>' 
+	     			           +'</td>' 
+	     			         +'</tr>'
+	    			);
+	    			
+	    			layui.use('laydate', function(){
+	    		        var laydate = layui.laydate;
+	    		        
+	    		        //执行一个laydate实例
+	    		        laydate.render({
+	    		          elem: '#start' //指定元素
+	    		        });
+	    		
+	    		        //执行一个laydate实例
+	    		        laydate.render({
+	    		          elem: '#end' //指定元素
+	    		        });
+	    	      	});
+	    			if(state == '已停用'){
+		    			$('#cclick'+i).addClass('layui-btn-disabled').html('已停用');	
+	    			}
+      				 /*用户-停用*/
+	    	       $('#cclick'+i).on('click',function(){
+	    	             var name = $('#name'+i).html();
+	    	           
+	    	    	   layer.confirm('确认要更改状态吗？',function(index){
+	    	    		   if($('#cclick'+i).attr('title')=='已启用'){
+	    	    			   $.ajax({
+			    	            	 url:'updateUsers?state=0&name='+name+'',
+			    	            	 method:'get',
+			    	              });
+		    	                //发异步把用户状态进行更改
+		    	                $('#cclick'+i).attr('title','已停用');
+
+		    	                $('#cclick'+i).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
+		    	                layer.msg('已停用!',{icon: 5,time:1000});
+		    	              
+		
+		    	              }else{
+		    	                $('#cclick'+i).attr('title','已启用')
+
+		    	                $('#cclick'+i).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
+		    	                layer.msg('已启用!',{icon: 6,time:1000});
+		    	                $.ajax({
+			    	            	 url:'updateUsers?state=1&name='+name,
+			    	            	 method:'get',
+			    	              });
+		    	              }
+	    	    	   })
+	    	    	  
+	    	       })
+	    	      
+	    	      /*用户-删除*/
+	    	       $('#delete'+i).on('click',function(){
+	    	    	   var name = $('#name'+i).html();
+						
+	    	    	   layer.confirm('确认要删除吗？',function(index){
+		    	              layer.msg('已删除!',{icon:1,time:1000});
+		    	    		$.ajax({
+		    	    			url:'deleteUser?name='+name+'',
+		    	    			method:'get',
+		    	    			success:function(){
+		    	    				ajax();
+		    	    			}
+		    	    		})
+		    	          });
+	    	  		  })    	  
+	    		 });
+	    		
+	    	 }
+	    	 
+	    		//分页
+	    		function page(result){
+	    			 
+	    			$('#page').pagination(result.total, {
+	    				//第一个参数指定共多少条记录
+	    		  	       items_per_page : result.pageSize, // 每页显示多少条记录
+	    		  	       next_text : '>', //下一页按钮图标
+	    		  	       prev_text : '<', //上一页按钮图标
+	    		  	       num_display_entries : 5,//主体页数
+	    		  	       num_edge_entries : 2, //边缘页数
+	    		  	       callback : function(pageNum){//定义一个回调函数，用于每次点击页码发起分页查询请求
+	    		  	    	 	
+	    		  	    	   		pageNum = ++pageNum;
+	    		  	    	   		$.ajax({
+	    		  	 					url: 'listUsers?pageNum='+pageNum+'&pageSize='+result.pageSize,
+	    		  	 					method: 'post',
+	    		  	 					success: function(result){
+	    		  	 					listUsers(result);
+	    		  	 				}
+	    		  	 		});
+	    		  	       }	   
+	    		  	});
+	    			 $('#pageCount').html(result.total);
+	    		}
+    });
+    </script>
+    <script>
+    	var _hmt = _hmt || []; (function() {
+	        var hm = document.createElement("script");
+	        hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
+	        var s = document.getElementsByTagName("script")[0];
+	        s.parentNode.insertBefore(hm, s);
+      	})();
+    </script>
+  </body>
+</html>

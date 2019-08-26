@@ -1,0 +1,48 @@
+
+ul,li,a{
+	margin:0;
+	padding:0;
+}
+.ul1{
+	width:510px;
+	margin:0 auto;
+}
+.ul1 li{
+	list-style:none;
+	width:100px;
+	line-height:45px;
+	font-size:25px;
+	text-align:center;
+	border:1px #000 solid;
+	float:left;
+	background:#00F;
+}
+.ul1 a{
+	color:#FFF;
+	text-decoration:none;
+}
+.ul1 ul{
+	display:none;
+}
+.ul1 ul li{
+	list-style:none;
+	width:100px;
+	line-height:30px;
+	text-align:center;
+	border:1px #000 solid;
+	background:#0FF;
+}
+
+.clearfix:before,.clearfix:after{
+	display:table;
+	content:"";
+}
+.clearfix:after{
+	clear:both;/*在所有元素的父元素上加伪类*/
+}
+.clearfix{
+	*zoom:1;
+}
+.clearfix:mouseout{
+	display:none;
+}

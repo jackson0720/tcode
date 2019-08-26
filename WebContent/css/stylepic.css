@@ -1,0 +1,32 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+.clearfix:after{content:".";visibility:hidden;display:block;height:0;clear:both}
+
+/* top_slide_wrap */
+.top_slide_wrap{width:100%;height:630px;overflow:hidden;position:relative;z-index:1;}
+.slide_box{height:630px;overflow:hidden}
+.slide_box li{height:630px}
+.slide_box img{width:100%;height:630px}
+.slide_info{width:100%;margin:-530px auto 0}
+.slide_info_card{width:420px;height:0;margin-top:171px;color:#fff;position:relative}
+.slide_info_card a{color:#fff;text-decoration:none}
+.slide_info_card .slide_info_card_bg{width:420px;height:200px;background:#0071c6;position:absolute;top:0;left:0;z-index:1;opacity:.8;*filter:alpha(opacity=80)}
+.slide_info_card .slide_info_card_text{width:340px;height:140px;padding:30px 40px;position:absolute;top:0;left:0;z-index:2}
+.slide_info_card h2{font-size:40px;padding-bottom:8px}
+.slide_info_card p{font-size:15px;line-height:26px}
+.slide_info_card p strong{font-size:12px;height:25px;display:inline-block;padding:0 10px;background:#095b99;border-radius:5px;color:#fff;margin-top:8px}
+/* op_btns */
+.op_btns{width:980px;margin:-590px auto 0;position:relative;z-index:3;*margin-top:-530px}
+.op_btns .op_btn{display:block;width:62px;height:62px;cursor:pointer;background:url("../images/icons_cb372887.png") no-repeat 0 -385px;overflow:hidden;position:absolute;margin-top:240px;}
+.op_btns .op_prev{left:-135px}
+.op_btns .op_next{right:-135px}
+.op_btns .op_prev span,.op_btns .op_next span{display:block;width:24px;height:44px;background:url("../images/icons_cb372887.png") no-repeat;margin:8px 0 0 17px;cursor:pointer}
+.op_btns .op_prev span{background-position:0 0;}
+.op_btns .op_next span{background-position:-73px 0;margin-left:20px;}
+/* bx-controls */
+.bx-wrapper .bx-controls{margin-top:-60px}
+.bx-wrapper .bx-controls .bx-pager{clear:both;width:100%;text-align:center;position:relative}
+.bx-wrapper .bx-controls .bx-pager a{background:#c2c2c2;width:12px;height:12px;display:inline-block;overflow:hidden;background:url("../images/icons_cb372887.png") -116px -90px\9;}
+.bx-wrapper .bx-controls .bx-pager a:hover,.bx-wrapper .bx-controls .bx-pager a.active{background:#0070c6;background:url("../images/icons_cb372887.png") 0 -90px\9;}

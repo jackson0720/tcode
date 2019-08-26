@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>T-Code 首页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+
+<link href="css/circles.css" rel="stylesheet" type="text/css" media="all" /><!-- circles-css --><!-- for skills section-->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/stylepic.css" rel="stylesheet"> 
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	
+	<!-- light-box -->
+	<link rel="stylesheet" href="css/poposlides.css">
+	<!-- //light-box -->
+<link rel="stylesheet" href="css/ul-menu.css">
+
+<link href="css/stylepic.css" rel="stylesheet"> 
+<!--fonts-->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+<!--//fonts-->
+<style>
+.active {color: red;}
+</style>
+</head>
+<body>
+
+
+<!-- <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script> -->
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+<script type="text/javascript" src="js/message.js"></script>
+<!-- ul-menu js -->
+<script type="text/javascript" src="js/ul-menu.js"></script>
+<!-- banner -->
+<div class="main_agileits">
+<div class="agile_wthree_nav">
+<nav class="navbar navbar-default">
+	<div class="navbar-header navbar-left" style="margin-top:-4vh;margin-left: -4vh;">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">T-Code</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		<h1><a class="navbar-brand" href="index.html"><img src="images/logo.png" style="position:relative;bottom:13px;"></a></h1>
+	</div>
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div style="margin-left: 10px;" class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+<nav class="link-effect-8" id="link-effect-8">
+			<ul class="nav navbar-nav" style="margin-left: auto;"  id="info">
+<li   class="active"><a href="index.html">　首页　</a></li>
+
+<li><a href="technology.html" >　技术板块　</a>
+	<ul class="nav clearfix" style="display:none;">
+	 <li><a href="technology.html#bc" style="color:white;">编程语言</a></li>
+	 <li><a href="technology.html#web" style="color:white;">Web应用</a></li>
+	 <li><a href="technology.html#yd" style="color:white;">移动开发</a></li>
+ 	 <li><a href="technology.html#qy"   style="color:white;">企业应用</a></li>
+</ul>	
+</li>
+
+<li><a href="sourcesquare.html">　开源广场　</a>
+	<ul class="nav clearfix" style="display:none;">
+		<li><a href="sourcesquare.html#kyxm"   style="color:white;">开源项目</a></li>
+		<li><a href="sourcesquare.html#kygs"   style="color:white;">开源公司</a></li>	
+    	<li><a href="sourcesquare.html#yyjz"   style="color:white;">优源巨作</a></li>           							 
+ 	</ul>	
+</li>
+
+<li><a href="IT-software.html"  >　IT圈子　</a>
+	<ul class="nav clearfix" style="display:none;">
+     	<li><a href="IT-software.html"   style="color:white;">软件更新</a></li>
+    	<li><a href="IT-news.html"   style="color:white;">行业资讯</a></li>
+    	<li><a href="IT-activity.html"   style="color:white;">活动版块</a></li>
+ 	</ul>	
+</li>
+
+<li><a href="developer.html"  >　开发者密室　</a>
+	<ul class="nav clearfix" style="display:none;">
+    	<li><a href="developer.html#jsts"   style="color:white;">技术探索</a></li>
+     	<li><a href="developer.html#kftl"   style="color:white;">开发讨论</a></li>
+    	<li><a href="developer.html#mnbc"   style="color:white;">模拟编程</a></li>
+  	</ul>	
+	</li>
+<li><a href="knowledge.html"  >　付费源码　</a>
+	<ul class="nav clearfix" style="display:none;">
+       <li><a href="buylist.html"   style="color:white;">已购源码</a></li>
+    </ul>
+</li>
+<li><a href="Feedback.html"  >反馈吐槽</a></li>
+</ul>
+<script type="text/javascript">
+$(function(){
+	$.ajax({
+		url:'logins',
+		method:'post',
+		success:function(results){
+			//alert(results);
+			if(results == null){
+				$('#info').append(
+						'<li><a href="Login.html" >'+"注册/登录"+'</a></li>'
+					);
+			}else{
+				$('#info').append(
+						'<li id="userli"><a href="Personal-Center.html" >'+'当前用户：'+results.u_account+'</a>'+
+						'<ul id="usernav" class="nav clearfix" style="display:none;">'+
+				    	'<li><a href="safecenter.html" style="color:white;">安全中心</a></li>'+
+				    	'<li><a href="logout" style="color:white;">'+"退出"+'</a></li>'+
+				  		'</ul></li>'
+				);
+				$("#userli").hover(function(){
+				    $("#usernav").css("display","block");
+				},function(){
+					$("#usernav").css("display","none");
+				});
+				if(results.u_num == 0){
+					$.ajax({
+						url:'updatenum?account='+results.u_account,
+						method:'get',
+						success:function(result){
+								alert("即将引导您完善个人资料");
+							window.location.href="add.html";
+							//window.location.href="index.html";
+						}
+					});
+				}else if(results.u_num != 0 && results.u_state != 0){
+					alert("正在对你的登录环境进行检测.....");
+					alert("当前已完成检测.....20%")
+					$.ajax({
+						url:'checkip?account='+results.u_account+'&ip='+results.u_IP,
+						method:'get',
+						success:function(result){
+							alert('当前已完成检测.....45%');
+							alert('当前已完成检测.....75%');
+							alert('当前已完成检测.....100%');
+							if(result == "IP与最后一次登录IP匹配异常，你的账号将受到二次登录限制！"){
+								$.ajax({
+									url:'sendmail?mail='+results.u_email,
+									method:'get',
+									success:function(result){
+										alert("您的账号已被暂时冻结，若存在误封，请前往账号绑定的邮箱查看异常提醒邮件。");
+										window.location.href="Login.html";
+									}
+								});
+							}else if(result == "检测完成，您可继续访问网站！"){
+								$.ajax({
+									url:'add_login_info?account='+results.u_account,
+									method:'get',
+									success:function(result){
+										alert("检测完成，您可继续访问网站！");
+										
+									}
+								})
+							}
+						}
+					});
+				}else if(results.u_state == 0){
+					alert("您的暂时被冻结或已被停用，请前往安全中心或点击异常邮件链接进行解除(若没有请到邮件垃圾站找回)！");
+					$.ajax({
+						url:'logout',
+						method:'post',
+						success:function(result){
+							window.location.href="Login.html";
+						}
+					})
+		}
+	}
+}
+	});
+});
+</script>
+							
+					</nav>
+				</div>
+				<div class="agile_search">
+					<!-- cd-search -->
+					<div class="cd-main-header">
+						<ul class="cd-header-buttons">
+							<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
+						</ul>
+						<!-- cd-header-buttons -->
+					</div>
+					<div id="cd-search" class="cd-search agileinfo">
+						<form action="#" method="post">
+							<input name="Search" type="search" placeholder="请输入你要查找的内容">
+						</form>
+					</div>
+					<!-- //cd-search -->
+
+				</div>
+			</nav>
+		</div>
+		<div class="s1" style="margin-top:100px;">
+			<h3>为所有开发者服务</h3>
+			<p>T-Code 最初是由一群热衷于编程的初学者于2012年中旬创造的。 本站最初的名字为 T-test。</p>
+			<p>如今，各个技能水平的开发者都可以在没有任何外部指导的情况下参与进来</p>
+			<p>为开源做出自己的贡献，同时也让更多的开发者进入这个大家庭</p>
+			<div class="w3-button">
+				<div class="w3ls-button">
+					<a href="#" class="hvr-shutter-out-vertical">Mail Us</a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+
+		</div>
+
+		<div class="slides-box">
+			<ul class="slides">
+				<li style="background: url(images/banner4.jpg) center"></li>
+				<li style="background: url(images/banner1.jpg)center"></li>
+				<li style="background: url(images/banner3.jpg) center"></li>
+				<li style="background: url(images/banner2.jpg)center"></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /banner -->
+<!-- about -->
+	<div class="about" id="about">
+		<div class="container">
+			<h3 class="w3_head w3_head1">T-Code</h3>
+			<p class="toppara">T-Code是最受欢迎的HTML、CSS 和 JS 框架，
+			以及最丰富的开源项目。在这里我们可以看到</p>
+			<img src="images/model1.png">
+		</div>
+	</div>
+<!-- //about -->
+
+<!-- services -->
+	<div class="services" id="services">
+		<div class="container">
+			<h3 class="w3_head w3_head1">热门技术 </h3>
+			<p class="toppara">　</p>
+		</div>
+		<div class="agileits_services_grids_bottom">
+			<div class="container">
+				<div class="col-md-4 agileits_service_grid_btm_left">
+					<div class="agileits_service_grid_btm_left1">
+						<img src="images/Java.png" alt=" " class="img-responsive" />
+						<div class="agileits_service_grid_btm_left2">
+							<h5>Java <span class="fa fa-suitcase"></span></h5>
+							<p>Java是一门面向对象编程语言，
+							不仅吸收了C++语言的各种优点，
+							还摒弃了C++里难以理解的多继承、指针等概念，
+							因此Java语言具有功能强大和简单易用两个特征。
+							Java语言作为静态面向对象编程语言的代表，
+							极好地实现了面向对象理论，
+							允许程序员以优雅的思维方式进行复杂的编程</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 agileits_service_grid_btm_left">
+					<div class="agileits_service_grid_btm_left1">
+						<img src="images/Net.png" alt=" " class="img-responsive" />
+						<div class="agileits_service_grid_btm_left2">
+							<h5>.NET<span class="fa fa-building"></span></h5>
+							<p>.NET是 Microsoft XML Web services 平台。
+							XML Web services 允许应用程序通过 Internet 进行通讯和共享数据，
+							而不管所采用的是哪种操作系统、设备或编程语言。
+							Microsoft .NET 平台提供创建 XML Web services 并将这些服务集成在一起之所需。
+							对个人用户的好处是无缝的、吸引人的体验。</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 agileits_service_grid_btm_left">
+					<div class="agileits_service_grid_btm_left1">
+						<img src="images/Python.png" alt=" " class="img-responsive" />
+						<div class="agileits_service_grid_btm_left2">
+							<h5>Python<span class="fa fa-cubes"></span></h5>
+							<p>Python是一种计算机程序设计语言。
+							是一种面向对象的动态类型语言，
+							最初被设计用于编写自动化脚本(shell)，
+							随着版本的不断更新和语言新功能的添加，
+							越来越多被用于独立的、大型项目的开发。
+							Python在设计上坚持了清晰划一的风格，
+							这使得Python成为一门易读、易维护，
+							并且被大量用户所欢迎的、用途广泛的语言。</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+				
+			</div>
+			<div style="margin:12px;position: relative;left: 1160px;">
+				<h5><a href="#">更多技术</a></h5>
+			</div>
+		</div>
+	</div>
+<!-- //services -->
+<div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+<!-- team -->
+	<div class="team" id="team">
+		<div class="container">
+			<h3 class="w3_head w3_head1">开源大咖 </h3>
+			<p class="toppara">在本站创立至今，本站得到开发者们的青睐，得以使更多开发者加入我们。
+			因此，在这些年里，一批批开发者的进驻，使网站越来越完善完美，因此
+			特别感谢以下开源数量最多，贡献最大的开发者们</p>
+			<div class="team-grids">
+			<div class="teamtopgrids">
+				<div class="col-md-3">
+					<div class="teamgrid1">
+						<img src="images/team1.jpg" alt="team1" />
+						<div class="p-mask">
+							<ul class="social-icons">
+								<li><a href="#"><span class="fa fa-wechat"></span></a></li>
+								<li><a href="#"><span class="fa fa-qq"></span></a></li>
+								<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								<li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div>
+
+						<div class="teaminfo">
+							<h4>john kerald</h4>
+							<p>美国硅谷思科系统-首席软件工程师</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="teamgrid1">
+						<img src="images/team2.jpg" alt="team1" />
+						<div class="p-mask">
+							<ul class="social-icons">
+								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+								<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								<li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div>
+
+						<div class="teaminfo">
+							<h4>Daniel Vinny</h4>
+							<p>意大利开普森产业CEO</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="teamgrid1">
+						<img src="images/team3.jpg" alt="team1" />
+						<div class="p-mask">
+							<ul class="social-icons">
+								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+								<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								<li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div>
+
+						<div class="teaminfo">
+							<h4>Elisa Eddy</h4>
+							<p>高级软件工程师</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="teamgrid1">
+						<img src="images/team4.jpg" alt="team1" />
+						<div class="p-mask">
+							<ul class="social-icons">
+								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+								<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								<li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div>
+
+						<div class="teaminfo">
+							<h4>Gabriel lix</h4>
+							<p>墨西哥卡尔卡诺集团软件工程师</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+				</div>
+				<div class="teambottomgrids">
+				<div class="col-md-3">
+					<div class="teamgrid1">
+						<img src="images/team5.jpg" alt="team1" />
+						<div class="p-mask">
+							<ul class="social-icons">
+								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+								<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								<li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div>
+
+						<div class="teaminfo">
+							<h4>Emma Sophia</h4>
+							<p>励志用程序改变非洲的女工程师</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="teamgrid1">
+						<img src="images/team6.jpg" alt="team1" />
+						<div class="p-mask">
+							<ul class="social-icons">
+								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+								<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								<li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div>
+
+						<div class="teaminfo">
+							<h4>Mia Emily</h4>
+							<p>第7届斯坦森大赛亚军获得者</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="teamgrid1">
+						<img src="images/team7.jpg" alt="team1" />
+						<div class="p-mask">
+							<ul class="social-icons">
+								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+								<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								<li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div>
+
+						<div class="teaminfo">
+							<h4>Anthony</h4>
+							<p>电脑“狂人”</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="teamgrid1">
+						<img src="images/team8.jpg" alt="team1" />
+						<div class="p-mask">
+							<ul class="social-icons">
+								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+								<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								<li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div>
+
+						<div class="teaminfo">
+							<h4>Victoria Smith</h4>
+							<p>美国林德弗斯高级架构师</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+<!-- team -->
+
+<!-- coding skills -->
+						<div class="w3ls_agile_circle_progress agile_info_shadow" id="skills">
+							<div class="container">
+								<div class="cir_agile_info ">
+									<h3 class="w3_head w3_head1">注册用户占比 </h3>
+									<p class="toppara">以下数据均为后台数据，因数据具有可变化性，因此 
+									以下数据仅供参考，当前数据最后一次更新时间为：
+									2019-06-20</p>
+									  <div class="skill-grids">
+											<div class="skills-grid text-center">
+												<div class="circle" id="circles-1"></div>
+												<h4>普通用户</h4>
+											</div>
+											<div class="skills-grid text-center">
+												<div class="circle" id="circles-2"></div>
+												<h4>资深用户</h4>
+											</div>
+											<div class="skills-grid text-center">
+												<div class="circle" id="circles-3"></div>
+												
+												<h4>会员用户</h4>
+											</div>
+											<div class="skills-grid text-center">
+												<div class="circle" id="circles-4"></div>
+												<h4>开发者</h4>
+											</div>
+												
+								
+				
+										 <div class="clearfix"></div>
+										
+								</div>
+							</div>
+							</div>
+						</div>
+<!-- //coding skills --> 
+
+<!-- pricing -->
+<div id="pricing" class="pricing">
+	<div class="container">
+		<div class="tittle-agileinfo">
+			<h3 class="w3_head w3_head1">知识付费 </h3>
+			<p class="toppara">在这里，你还可以看到大咖创作优质的项目
+			以及最新的技术。开源项目最重要的不是免费，而是优质</p>
+		</div>
+						<div class="sreen-gallery-cursual">
+							
+						       <div id="owl-demo" class="owl-carousel">
+							      <div class="item-owl">
+					                		<div class="test-review">
+											  <p> Java</p>
+											  <h4><sup>$</sup>7</h4>
+											  <h5>Java高并发之魂：synchronized深度解析</h5>
+											  <p class="innerpara">高并发问题向来是Java程序员进阶的重点，
+											  也是面试的难点。想要打通高并发的奇经八脉，
+											  synchronized是你不得不趟过的坑，本课程从synchronized，
+											  从使用方法到底层原理源码，娓娓道来。
+											 </p>
+											  <div class="startpricing">
+												<a class="popup-with-zoom-anim" href="#small-dialog">获	取</a>
+											  </div>
+					                	    </div>
+					                </div>
+					                 <div class="item-owl">
+					                	<div class="test-review">
+											  <p> Shiro</p>
+											  <h4><sup>$</sup>10</h4>
+											  <h5>Shiro安全框架入门</h5>
+											  <p class="innerpara">本课程通过从shiro和spring Security对比入手，
+											  进而讲解Shiro整体架构以及认证，授权的过程，
+											  通过结合代码带同学更深刻的认识Shiro。
+											  同时课程会讲解Shiro其他特性，比如：Session管理，缓存管理等，
+											  以及集成Spring在实际项目中应用Shiro。
+											  </p>
+											  <div class="startpricing">
+												<a class="popup-with-zoom-anim" href="#small-dialog">获	取</a>
+											  </div>
+											</div>
+					                </div>
+					                 <div class="item-owl">
+					                	    <div class="test-review">
+											  <p> Python</p>
+											  <h4><sup>$</sup>12</h4>
+											  <h5>Python3入门机器学习</h5>
+											  <p class="innerpara">使用新版python3语言和流行的scikit-learn框架，
+											  算法与编程两翼齐飞，由浅入深，一步步的进入机器学习的世界。
+											  学到的不只是一门课程，更是不断思考的能力
+											  在实际应用的基础上，更进一步深入探讨
+											  如何在项目中选择最合适的算法
+											  分析不同算法间的优缺点</p>
+											  <div class="startpricing">
+												<a class="popup-with-zoom-anim" href="#small-dialog">获	取</a>
+											  </div>
+											</div>
+					                </div>
+									 <div class="item-owl">
+					                	    <div class="test-review">
+											  <p> 前端</p>
+											  <h4><sup>$</sup>15</h4>
+											  <h5>前端性能优化-通用的缓存SDK</h5>
+											  <p class="innerpara">性能优化成神之路的必看之课，
+											  是前端性能优化基础简介的后续篇章，
+											  作为一门前端性能优化的进阶课程，
+											  本课程介绍了常用的性能优化方法，
+											  以及老师自己在工作中摸索出来的，并且在大厂使用的课程。
+											  主要介绍造成性能优化dom时候，主要碰到的重绘以及回流问题。 </p>
+											  <div class="startpricing">
+												<a class="popup-with-zoom-anim" href="#small-dialog">获	取</a>
+											  </div>
+										   </div>
+					                </div>
+									<div class="item-owl">
+					                	    <div class="test-review">
+											  <p> TypeScript</p>
+											  <h4><sup>$</sup>15</h4>
+											  <h5>前端下一代开发语言TypeScript 从基础到axios实战</h5>
+											  <p class="innerpara">TypeScript是前端的发展趋势，但是很多同学却缺少实战经验，
+											  而且市面上缺少TypeScript 的实战课程。
+											  使用TypeScript一步步去实现一个完整的axios JS库，
+											  然后进行完整的单元测试，最后把开发的JS 库打包并发布到npm上</p>
+											  <div class="startpricing">
+												<a class="popup-with-zoom-anim" href="#small-dialog">获	取</a>
+											  </div>
+											</div>
+					                </div>
+				              </div>
+
+		</div>
+	</div>
+</div>
+<!--pricing-->
+
+<!-- subscribe -->
+<div class="subscribe">
+	<div class="container">
+		<div class="tittle-agileinfo">
+			<h3 class="w3_head w3_head1">邮箱订阅</h3>
+			<p class="toppara">如果您觉得我们站内内容优质，有非常不错的技术，
+			让您有非常好的学习提升与学习体验的话，不妨在下方留下您的邮箱，
+			订阅我们的频道，我们会不定期推送更多精彩内容</p>
+		</div>
+				<div class="w3-agile-subscribe">
+					<form action="#" method="post">
+						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="请输入您的电子邮箱..." required="">
+						<input type="submit" value="订	阅">
+					</form>
+					<h5>OR</h5>
+					<div class="agileinfo-social-grids">
+						<ul>
+							<li><a href="#"><i class="fa fa-wechat"></i></a></li>
+							<li><a href="#"><i class="fa fa-qq"></i></a></li>
+							<li><a href="#"><i class="fa fa-weibo"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+						</ul>
+					</div>
+				</div>
+	</div>
+</div>
+<!-- //subscribe -->
+
+<!-- contact -->
+<div id="contact" class="contact">
+	<div class="container">
+		<div class="tittle-agileinfo">
+			<h3 class="w3_head w3_head1">联系我们</h3>
+			<p class="toppara">如果您真心喜欢我们，想要加入我们，
+			或者对我们有什么意见，可以通过下方信息联系我们</p>
+		</div>
+		<iframe src=""></iframe>
+		<div class="contactimain" style="margin-top:-380px;">
+			<div class="col-md-6 contact-left">
+				<form action="#" method="post">
+					<div class="wthree_contact_left_grid">
+						<input type="text" name="Name" placeholder="姓名..." required="">
+						<input type="email" name="Email" placeholder="邮箱..." required="">
+						<input type="text" name="Telephone" placeholder="电话..." required="">
+						<input type="text" name="Subject" placeholder="爱好..." required="">
+						<textarea name="Message" placeholder="简介..." required></textarea>
+						<input type="submit" value="提交">
+					</div>
+					<div class="clearfix"> </div>
+				</form>
+			</div>
+			<div class="col-md-6 contact-right">
+				<div class="agile_info_mail_img_info">
+					<div class="address-grid">
+						<h4>Contact <span>Info</span></h4>
+						<p class="contacttext">Aliquam id quam pulvinar lectus aliquam rhoncus. In tristique nibh eget 
+						lorem cursus hendrerit. Suspendisse quis leo ac.</p>
+						<div class="mail-agileits-w3layouts">
+							<div class="contacticon">
+								<i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+							</div>
+							<div class="contact-right-inner">
+								<p>电话号码： </p><span>+86 (0756)860-70-19</span>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="mail-agileits-w3layouts">
+							<div class="contacticon">
+								<i class="fa fa-envelope-o" aria-hidden="true"></i>
+							</div>
+							<div class="contact-right-inner">
+								<p>电子邮箱： </p><a href="mailto:info@example.com">1433873tcode@example.com</a>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="mail-agileits-w3layouts">
+							<div class="contacticon">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+							</div>
+							<div class="contact-right-inner">
+								<p>公司地址</p><span>珠海市斗门区白蕉镇白蕉南路28号Sing有限公司</span>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!-- //contact -->
+
+<!-- Footer -->
+<div class="footer w3ls">
+	<div class="container">
+			<div class="ftr-menu">
+				 <ul>
+					<li><a   href="#home">首页 </a></li>
+					<li><a   href="#about">技术板块</a></li>
+					<li><a   href="#services">开源广场</a></li>
+					<li><a   href="#team">IT圈子</a></li>
+					<li><a   href="#skills">版务委员会</a></li>
+					<li><a   href="#pricing">付费知识</a></li>
+					<li><a   href="#contact">开发者密室</a></li>
+				 </ul>
+			</div>
+			<div class="w3ls-social-icons-2">
+				<a class="wechat" href="#"><i class="fa fa-wechat"></i></a>
+				<a class="qq" href="#"><i class="fa fa-qq"></i></a>
+				<a class="weibo" href="#"><i class="fa fa-weibo"></i></a>
+				<a class="pinterest" href="#"><i class="fa fa-google-plus"></i></a>			
+				<a class="tumblr" href="#"><i class="fa fa-tumblr"></i></a>
+			</div>
+			<div class="logo-fo">
+				<h2><a href="index.html">T-CODE</a></h2>
+			</div>
+			<div class="clearfix"> </div>
+	</div>
+</div>
+<div class="copyrights">
+	<p>Copyright &copy; 2018.Sing Company All rights reserved.More Templates <a href="index.html" target="_blank" title="T-Code">T-Code</a> - Collect from <a href="index.html" title="opne" target="_blank">T-Code</a></p>
+</div>
+<!-- //Footer -->
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- ul-menu js -->
+<script type="text/javascript" src="js/ul-menu.js"></script>
+
+<!-- banner js -->
+<script src="js/search.js"></script>
+	<script src="js/poposlides.js">
+	</script>
+	<script>
+		$(".slides").poposlides();
+	</script>
+<!-- //banner js -->
+
+		
+		<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+																							
+		});
+		</script>
+		
+<!-- required-js-files-->
+							<link href="css/owl.carousel.css" rel="stylesheet">
+							    <script src="js/owl.carousel.js"></script>
+							        <script>
+							    $(document).ready(function() {
+							      $("#owl-demo").owlCarousel({
+							        items :3,
+									itemsDesktop : [768,2],
+									itemsDesktopSmall : [414,1],
+							        lazyLoad : true,
+							        autoPlay : true,
+							        navigation :true,
+									
+							        navigationText :  false,
+							        pagination : true,
+									
+							      });
+								  
+							    });
+							    </script>
+								 <!--//required-js-files-->
+
+
+<!-- /circle-->
+	 <script type="text/javascript" src="js/circles.js"></script>
+					         <script>
+								var colors = [
+										['none', '#fd9426'], ['#fafafa', '#fc3158'],['#fafafa', '#53d769'], ['#fafafa', '#147efb']
+									];
+								for (var i = 1; i <= 7; i++) {
+									var child = document.getElementById('circles-' + i),
+										percentage = 30 + (i * 10);
+										
+									Circles.create({
+										id:         child.id,
+										percentage: percentage,
+										radius:     80,
+										width:      13,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[i - 1]
+									});
+								}
+						
+				</script>
+	<!-- //circle -->
+
+<script src="js/SmoothScroll.min.js"></script>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+
+<!-- move to top-js-files -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+<!-- //move to top-js-files -->
+
+
+<script type="text/javascript" src="js/bootstrap.js"></script><!-- bootstrap js file -->
+
+</body>
+</html>

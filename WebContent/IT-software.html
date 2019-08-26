@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>T-Code 前沿技术</title>
+<style type="text/css">
+.act{
+color:white;
+}
+.adt:move{
+color:#1cc7d0;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<link href="css/circles.css" rel="stylesheet" type="text/css" media="all" /><!-- circles-css --><!-- for skills section-->
+<link rel="stylesheet" href="css/style1.css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> 
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/stylepic.css" rel="stylesheet"> 
+<!-- 导航栏div过渡 -->
+<link rel="stylesheet" type="text/css" href="css/div-transition.css"/>	
+	<!-- light-box -->
+	<link rel="stylesheet" href="css/poposlides.css">
+<!--fonts-->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+<!--//fonts-->
+
+<!-- 分页 -->
+<link rel="stylesheet" type="text/css" href="css/zxf_page.css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/zxf_page.js"></script>
+	
+	<!-- light-box -->
+	<link rel="stylesheet" href="css/poposlides.css">
+	<!-- //light-box -->
+<link rel="stylesheet" href="css/ul-menu.css">
+
+
+</head>
+<body>
+<!-- banner -->
+		<div class="wthree_dao" style="background-image: url('images/timg-kj.jpg');position: relative; margin-top: -12px;">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header navbar-left" style="margin-top:-4vh;margin-left: -4vh;">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">T-Code</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1><a class="navbar-brand" href="index.html"><img src="images/logo.png" style="position:relative;bottom:13px;"></a></h1>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+
+				<div style="margin-left: 10px;" class="collapse navbar-collapse navbar-right"id="bs-example-navbar-collapse-1">
+					<nav class="link-effect-8" id="link-effect-8">
+						<ul class="nav navbar-nav" style="margin-left: auto;" id="info">
+							<li><a href="index.html">　首页　</a></li>
+							
+							<li><a href="technology.html" >　技术板块　</a>
+								<ul class="nav clearfix" style="display:none;">
+           							 <li><a href="technology.html#bc" style="color:white;">编程语言</a></li>
+            						 <li><a href="technology.html#web" style="color:white;">Web应用</a></li>
+           							 <li><a href="technology.html#yd" style="color:white;">移动开发</a></li>
+          							 <li><a href="technology.html#qy"   style="color:white;">企业应用</a></li>
+        						</ul>	
+							</li>
+							
+							<li><a href="sourcesquare.html">　开源广场　</a>
+								<ul class="nav clearfix" style="display:none;">
+									<li><a href="sourcesquare.html#kyxm"   style="color:white;">开源项目</a></li>
+									<li><a href="sourcesquare.html#kygs"   style="color:white;">开源公司</a></li>	
+            						<li><a href="sourcesquare.html#yyjz"   style="color:white;">优源巨作</a></li>           							 
+        						</ul>	
+							</li>
+							
+							<li  class="active"><a href="IT-software.html"  >　IT圈子　</a>
+								<ul class="nav clearfix" style="display:none;">
+            						 <li><a href="IT-software.html"   style="color:white;">软件更新</a></li>
+           							 <li><a href="IT-news.html"   style="color:white;">行业资讯</a></li>
+           							 <li><a href="IT-activity.html"   style="color:white;">活动版块</a></li>
+        						</ul>	
+							</li>
+							
+							<li><a href="developer.html"  >　开发者密室　</a>
+								<ul class="nav clearfix" style="display:none;">
+           							 <li><a href="developer.html#jsts"   style="color:white;">技术探索</a></li>
+            						 <li><a href="developer.html#kftl"   style="color:white;">开发讨论</a></li>
+           							 <li><a href="developer.html#mnbc"   style="color:white;">模拟编程</a></li>
+        						</ul>	
+							</li>
+							
+							<li><a href="knowledge.html"  >　付费源码　</a>
+								<ul class="nav clearfix" style="display:none;">
+       							<li><a href="buylist.html"   style="color:white;">已购源码</a></li>
+    							</ul>
+							</li>
+							
+							<li><a href="Feedback.html"  >反馈吐槽</a></li>
+							
+
+						</ul>
+						<script type="text/javascript">
+								$(function(){
+									$.ajax({
+										url:'logins',
+										method:'post',
+										success:function(results){
+											//alert(results);
+											if(results == null){
+												$('#info').append(
+														'<li><a href="Login.html" >'+"注册/登录"+'</a></li>'
+													);
+											}else{
+												$('#info').append(
+														'<li id="userli"><a href="Personal-Center.html" >'+'当前用户：'+results.u_account+'</a>'+
+														'<ul id="usernav" class="nav clearfix" style="display:none;">'+
+												    	'<li><a href="safecenter.html" style="color:white;">安全中心</a></li>'+
+												    	'<li><a href="logout" style="color:white;">'+"退出"+'</a></li>'+
+												  		'</ul></li>'
+												)
+												$("#userli").hover(function(){
+												    $("#usernav").css("display","block");
+												},function(){
+													$("#usernav").css("display","none");
+												});
+											
+										}
+											
+										}
+									})
+								});
+							</script>
+					</nav>
+				</div>
+				<div class="agile_search">
+					<!-- cd-search -->
+					<div class="cd-main-header">
+						<ul class="cd-header-buttons">
+							<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
+						</ul>
+						<!-- cd-header-buttons -->
+					</div>
+					<div id="cd-search" class="cd-search agileinfo">
+						<form action="#" method="post">
+							<input name="Search" type="search" placeholder="请输入你要查找的内容">
+						</form>
+					</div>
+					<!-- //cd-search -->
+
+				</div>
+			</nav>
+		</div>
+<!-- /banner -->
+	<div class="renew" id="renew">
+		<div class="about">
+		<div class="container">
+			<h3 class="w3_head w3_head1">前沿技术</h3>
+		</div>
+		</div>
+		<div style="border-top: 5px solid #3B4867;">
+		<div class="container-fluid">
+					<div class="row-fluid">
+						<div class="span12">
+							<div class="tabbable tabs-left" id="tabs-638626">
+								<ul class="nav" style="float: left;background-color: #3B4867;">
+									<li class="active" style="width: 120px;">
+										<a href="#panel-124101" data-toggle="tab" class="act">程序开发</a>
+									</li>
+									<li style="width: 120px;">
+										<a href="#panel-124102" data-toggle="tab" class="act">编程软件</a>
+									</li>
+									<li style="width: 120px;">
+										<a href="#panel-124103" data-toggle="tab" class="act">JQuery插件</a>
+									</li>
+									<li style="width: 120px;">
+										<a href="#panel-124104" data-toggle="tab" class="act">数据库相关</a>
+									</li>
+									<li style="width: 120px;">
+										<a href="#panel-124105" data-toggle="tab" class="act">其他开源</a>
+									</li>
+									<li style="width: 120px;height: 490px;">
+										<span>　</span>
+									</li>
+								</ul>
+								
+								<div class="tab-content">
+									<div class="tab-pane active" id="panel-124101">
+											<table border="0" style="width: 1000px;">
+											<!-- Hutool -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;background-color: pink;">
+																<img src="images/Hu.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/hutool" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>Hutool</b></h4></div>
+															<div><span>Hutool是一个Java工具包，也只是一个工具包，它帮助我们简化每一行代码，减少每一个方法，让Java语言也可以“甜甜的”</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													<!-- tio -->
+													<tr>
+															<th colspan="4" style="padding: 15px 40px;">
+																<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/tio.png">
+															</div>
+															</th>
+															<th style="border-bottom: 1px solid #1cc7d0;">
+															<div style="height:20px;"></div>
+																<div>
+																<a href="https://www.oschina.net/p/t-io" style="color:black;" target="_blank">
+																<div style="margin-bottom: 10px; "><h4><b>talent-tan/t-io</b></h4></div>
+																<div><span>t-io是基于aio(nio2)的网络编程框架，和netty属于同类，但t-io更注重一线开发工程师的感受，提供了大量和业务相关的API。基于t-io来开发IM、TCP私有协议、RPC、游戏服务器端</span></div>
+																</a>
+																</div>
+																<div style="height:20px;"></div>
+															</th>
+														</tr>
+														<!-- 人人开源 -->
+														<tr>
+															<th colspan="4" style="padding: 15px 40px;">
+																<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/renren.png">
+															</div>
+																<!--  <div style="float: left;font-size: 9px;">[程序开发]</div>-->
+															</th>
+															<th style="border-bottom: 1px solid #1cc7d0;">
+															<div style="height:20px;"></div>
+																<div>
+																<a href="https://gitee.com/renrenio/renren-security" style="color:black;" target="_blank">
+																<div style="margin-bottom: 10px; "><h4><b>人人开源/renren-security</b></h4></div>
+																<div><span>采用SpringBoot2.0、MyBatis、Shiro框架，开发的一套权限系统，极低门槛，拿来即用。设计之初，就非常注重安全性，为企业系统保驾护航，让一切都变得如此简单</span></div>
+																</a>
+																</div>
+																<div style="height:20px;"></div>
+															</th>
+														</tr>													
+														<!-- Lemur开源/easypoi -->
+														<tr>
+															<th colspan="4" style="padding: 15px 40px;">
+																<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/easycode.png">
+															</div>
+															</th>
+															<th style="border-bottom: 1px solid #1cc7d0;">
+															<div style="height:20px;"></div>
+																<div>
+																<a href="https://gitee.com/lemur/easypoi" style="color:black;" target="_blank">
+																<div style="margin-bottom: 10px; "><h4><b>Lemur开源/easypoi</b></h4></div>
+																<div><span>POI 工具类,Excel的快速导入导出,Excel模板导出,Word模板导出,可以仅仅5行代码就可以完成Excel的导入导出,修改导出格式简单粗暴,快速有效,easypoi值得你尝试</span></div>
+																</a>
+																</div>
+																<div style="height:20px;"></div>
+															</th>
+														</tr>
+														<!-- Javen/IJPay -->
+														<tr>
+															<th colspan="4" style="padding: 15px 40px;">
+																<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/IJpay.png">
+															</div>
+															</th>
+															<th style="border-bottom: 1px solid #1cc7d0;">
+															<div style="height:20px;"></div>
+																<div>
+																<a href="https://www.oschina.net/p/ijpay" style="color:black;" target="_blank">
+																<div style="margin-bottom: 10px; "><h4><b>Javen/IJPay</b></h4></div>
+																<div><span>IJPay 让支付触手可及，封装了微信支付、支付宝支付、银联支付常用的支付方式以及各种常用的接口。不依赖任何第三方 mvc 框架，仅仅作为工具使用简单快速完成支付模块的开发，可轻松嵌入</span></div>
+																</a>
+																</div>
+																<div style="height:20px;"></div>
+															</th>
+														</tr>
+														<!-- jmdhappy/xxpay -->
+														<tr>
+															<th colspan="4" style="padding: 15px 40px;">
+																<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/xxPay.png">
+															</div>
+															</th>
+															<th style="border-bottom: 1px solid #1cc7d0;">
+															<div style="height:20px;"></div>
+																<div>
+																<a href="https://gitee.com/jmdhappy/xxpay-master" style="color:black;" target="_blank">
+																<div style="margin-bottom: 10px; "><h4><b>jmdhappy/xxpay</b></h4></div>
+																<div><span>XxPay聚合支付使用Java开发，包括spring-cloud、dubbo、spring-boot三个架构版本，已接入微信、支付宝等主流支付渠道，可直接用于生产环境</span></div>
+																</a>
+																</div>
+																<div style="height:20px;"></div>
+															</th>
+														</tr>
+											</table>
+												<div style="height:30px;"></div>
+												<!--翻页-->
+											<div class="zxf_pagediv"></div>
+											<script type="text/javascript">
+													//翻页
+													$(".zxf_pagediv").createPage({
+													pageNum: 2,
+													current: 1,
+													backfun: function(e) {
+													//console.log(e);//回调
+													}
+												});
+											</script>
+									</div>
+									
+									<!-- 编程软件 -->
+									<div class="tab-pane" id="panel-124102">
+										<table border="0" style="width: 1000px;">
+											<!--  cointop  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/cointop.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/cointop" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b> Cointop 控制台的加密货币跟踪工具 </b></h4></div>
+															<div><span>Cointop是一个快速而且轻量级的交互式终端应用，用来实时跟踪和监控加密货币行情。其灵感来自于 htop ，而键盘操作习惯来在于 vim </span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													
+													<!--   Akraino Edge Stack  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/akraino_edge0.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/akraino-edge-stack" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>Akraino Edge Stack 高性能边缘云服务</b></h4></div>
+															<div><span>AkrainoEdge Stack 是一个面向高性能边缘云服务的开源项目，并为边缘基础设施提供整体的解决方案。Akraino Edge Stack 致力于发展一套开源软件栈，用于优化边缘基础设施的网络构建和管理方式，以满足边缘计算云的要求</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													<!--   Open CORD  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/cord.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/open-cord" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>Open CORD 网络边缘基础设施</b></h4></div>
+															<div><span>CORD 是为网络运营商推出的开源项目，旨在利用软件定义网络（SDN）、网络功能虚拟化（NFV）和云计算技术重构现有的网络边缘基础设施，并将其打造成可灵活地提供计算和网络服务的数据中心</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													
+													<!--   Edgex foundry  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/edgex.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/edgex-foundry" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b> Edgex foundry 面向物联网端的边缘计算开源平台</b></h4></div>
+															<div><span>EdgeXFoundry 是一个面向工业物联网边缘计算开发的标准化互操作性框架，部署于路由器和交换机等边缘设备上，为各种传感器、设备或其他物联网器件提供即插即用功能并管理 它们，进而收集和分析它们的数据</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													
+													<!--   umi  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/umi.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/umi" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>可插拔的企业级 react 应用框架 umi</b></h4></div>
+															<div><span>umi 的整个生命周期都是插件化的，甚至其内部实现就是由大量插件组成，比如 pwa、按需加载、一键切换 preact、一键兼容 ie9 等等，都是由插件实现</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													
+													<!--   xarray  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/xarray.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/xarray" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>多维数组中加入变量名与坐标索引 xarray</b></h4></div>
+															<div><span>xarray 是一个开源 Python 包，它可以使处理多维数组更加简单、高效并有趣。xarray 在原始类 NumPy 多维数组中引入了标签化的变量名称和坐标索引，实现了更直观、更简洁和更加不容易出错的能力</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+												</table>
+												<div style="height:30px;"></div>
+												<!--翻页-->
+											<div class="zxf_pagediv"></div>
+											<script type="text/javascript">
+													//翻页
+													$(".zxf_pagediv").createPage({
+													pageNum: 2,
+													current: 1,
+													backfun: function(e) {
+													//console.log(e);//回调
+													}
+												});
+											</script>
+									</div>
+									
+									<!-- JQuery插件 -->
+									<div class="tab-pane" id="panel-124103">
+										<table border="0" style="width: 1000px;">
+											<!--  zTree v3  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/zTree.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/ztree" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b> zTree v3插件 </b></h4></div>
+															<div><span>zTree 是一个依靠 jQuery 实现的多功能 “树插件”。优异的性能、灵活的配置、多种功能的组合是 zTree 最大优点 采用了 延迟加载 技术，上万节点轻松加载，即使在 IE6 下也能基本做到秒杀</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													
+													<!--   bs2004/jquery.bsgrid  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/BS.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/jquery-bsgrid" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>bs2004/jquery.bsgrid</b></h4></div>
+															<div><span>支持json、xml数据格式，皮肤丰富并且容易定制，支持表格编辑、本地数据、导出参数构建等实用便捷的功能，容易扩展，更拥有丰富的示例以及问题反馈的及时响应</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													<!--   Harris  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/Harris.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/jquery-treetable" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>Harris</b></h4></div>
+															<div><span>JQuery TreeTable Plugin基于JQuery的表格树插件，按data-id和data-pid计算布局，在表格中展现树型结构。附加展开、关闭、查询、删除、注销、重置等公共函数</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													
+													<!--   parky  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/parky.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://gitee.com/parki/domTemplate" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>parky/domTemplate </b></h4></div>
+															<div><span>一个基于jquery/zepto 非侵入式、不会破坏原来静态页面结构、可被浏览器正确显示的、格式良好的前端HTML模板引擎，动态模板文件不能被浏览器解释、必须要运行在服务器中才能显示出效果</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													
+													<!--   笔心  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/bixin.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://gitee.com/qinshenxue/datepicker" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>笔心/jquery.datepicker</b></h4></div>
+															<div><span>日期选择控件，依赖jquery，代码简单，小巧，只提供最基本的功能，可以自己进行二次开发，自定义样式，内置简单模板引擎，精简代码，去掉trigger配置，保持更新</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													
+													<!--    mqycn/jQueryMarquee   -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/rCat.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/jquerymarquee" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b> mqycn/jQueryMarquee </b></h4></div>
+															<div><span>mqycn 是一个开源 jQuery 包，它可以使处理多维数组更加简单、高效并有趣。xarray 在原始类 NumPy 多维数组中引入了标签化的变量名称和坐标索引，实现了更直观、更简洁和更加不容易出错的能力</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+												</table>
+												<div style="height:30px;"></div>
+												<!--翻页-->
+											<div class="zxf_pagediv"></div>
+											<script type="text/javascript">
+													//翻页
+													$(".zxf_pagediv").createPage({
+													pageNum: 2,
+													current: 1,
+													backfun: function(e) {
+													//console.log(e);//回调
+													}
+												});
+											</script>
+										</div>
+										
+									<!-- 数据库相关 -->
+									<div class="tab-pane" id="panel-124104">
+										<table border="0" style="width: 1000px;">
+											<!--  robergroup/pdman  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/pdman.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/PDMan" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b> robergroup/pdman</b></h4></div>
+															<div><span>PDMan是一款开源免费的数据库模型建模工具，支持Windows,Mac,Linux等操作系统，是PowerDesigner之外，更好的免费的替代方案。他具有颜值高，使用简单的特点</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													
+													<!--   Apache ShardingSphere   -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/shard.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://gitee.com/Sharding-Sphere/sharding-sphere" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>Apache ShardingSphere </b></h4></div>
+															<div><span>Apache ShardingSphere(Incubator) 是一套开源的分布式数据库中间件解决方案组成的生态圈，它由Sharding-JDBC、Sharding-Proxy和Sharding-Sidecar（规划中）这3款相互独立，却又能够混合部署</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													<!--  wenshao/druid  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/wenshao.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://www.oschina.net/p/druid" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>wenshao/druid</b></h4></div>
+															<div><span>Druid是一个JDBC组件，它包括三部分： DruidDriver 代理Driver，能够提供基于Filter－Chain模式的插件体系。 DruidDataSource 高效可管理的数据库连接池 SQLParser </span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													
+													<!--   parky  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/parky.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://gitee.com/parki/domTemplate" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>parky/domTemplate </b></h4></div>
+															<div><span>一个基于jquery/zepto 非侵入式、不会破坏原来静态页面结构、可被浏览器正确显示的、格式良好的前端HTML模板引擎，动态模板文件不能被浏览器解释、必须要运行在服务器中才能显示出效果</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													
+													<!--   笔心  -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/bixin.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://gitee.com/qinshenxue/datepicker" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b>笔心/jquery.datepicker</b></h4></div>
+															<div><span>日期选择控件，依赖jquery，代码简单，小巧，只提供最基本的功能，可以自己进行二次开发，自定义样式，内置简单模板引擎，精简代码，去掉trigger配置，保持更新</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+													
+													<!--    mqycn/jQueryMarquee   -->
+													<tr>
+														<th colspan="4" style="padding: 15px 40px;">
+															<div style="float: left;margin-right: 8px; width:50px;height:50px;">
+																<img src="images/rCat.png">
+															</div>
+														</th>
+														<th style="border-bottom: 1px solid #1cc7d0;">
+														<div style="height:20px;"></div>
+															<div>
+															<a href="https://gitee.com/mqycn/jQueryMarquee" style="color:black;" target="_blank">
+															<div style="margin-bottom: 10px; "><h4><b> mqycn/jQueryMarquee </b></h4></div>
+															<div><span>mqycn 是一个开源 jQuery 包，它可以使处理多维数组更加简单、高效并有趣。xarray 在原始类 NumPy 多维数组中引入了标签化的变量名称和坐标索引，实现了更直观、更简洁和更加不容易出错的能力</span></div>
+															</a>
+															</div>
+															<div style="height:20px;"></div>
+														</th>
+													</tr>
+												</table>
+												<div style="height:30px;"></div>
+												<!--翻页-->
+											<div class="zxf_pagediv"></div>
+											<script type="text/javascript">
+													//翻页
+													$(".zxf_pagediv").createPage({
+													pageNum: 2,
+													current: 1,
+													backfun: function(e) {
+													//console.log(e);//回调
+													}
+												});
+											</script>
+										</div>
+										
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- Footer -->
+<div class="footer w3ls">
+	<div class="container">
+			<div class="ftr-menu">
+				 <ul>
+					<li><a class="scroll" href="#home">首页 </a></li>
+					<li><a class="scroll" href="#about">技术板块</a></li>
+					<li><a class="scroll" href="#services">开源广场</a></li>
+					<li><a class="scroll" href="#team">IT圈子</a></li>
+					<li><a class="scroll" href="#skills">版务委员会</a></li>
+					<li><a class="scroll" href="#pricing">付费知识</a></li>
+					<li><a class="scroll" href="#contact">开发者密室</a></li>
+				 </ul>
+			</div>
+			<div class="w3ls-social-icons-2">
+				<a class="wechat" href="#"><i class="fa fa-wechat"></i></a>
+				<a class="qq" href="#"><i class="fa fa-qq"></i></a>
+				<a class="weibo" href="#"><i class="fa fa-weibo"></i></a>
+				<a class="pinterest" href="#"><i class="fa fa-google-plus"></i></a>			
+				<a class="tumblr" href="#"><i class="fa fa-tumblr"></i></a>
+			</div>
+			<div class="logo-fo">
+				<h2><a href="index.html">T-CODE</a></h2>
+			</div>
+			<div class="clearfix"> </div>
+	</div>
+</div>
+<div class="copyrights">
+	<p>Copyright &copy; 2018.Sing Company All rights reserved.More Templates <a href="index.html" target="_blank" title="T-Code">T-Code</a> - Collect from <a href="index.html" title="opne" target="_blank">T-Code</a></p>
+</div>
+<!-- //Footer -->
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- ul-menu js -->
+<script type="text/javascript" src="js/ul-menu.js"></script>
+
+<!-- banner js -->
+<script src="js/search.js"></script>
+	<script src="js/poposlides.js">
+	</script>
+	<script>
+		$(".slides").poposlides();
+	</script>
+<!-- //banner js -->
+
+<!--pop-up-grid-->
+		<div id="popup">
+			<div id="small-dialog" class="mfp-hide">
+				<div class="signin-form profile">
+					<h3>登     录</h3>		
+					<div class="login-form">
+						<form action="#" method="post">
+							<input type="text" name="name" placeholder="用户名..." required="">
+							<input type="password" name="password" placeholder="密码..." required="">
+							<input type="submit" value="登   录">
+						</form>
+					</div>					
+				</div>
+				<div style="width: 10vw;height:3vh;">
+					<a href="#big-dialog" class="popup-with-zoom-anim" id="toRegister">
+						没有账号？去注册</a>
+				</div>
+			</div>
+		</div>				
+		<!--pop-up-grid-->
+		
+<!--pop-res-grid-->
+		<div id="popup">
+			<div id="big-dialog" class="mfp-hide">
+				<div class="signin-form profile">
+					<h3>注     册</h3>		
+					<div class="login-form">
+						<form action="#" method="post">
+							<input type="text" name="name" placeholder="用户名..." required="">
+							<input type="password" name="password" placeholder="密码..." required="">
+							<input type="password" name="password" placeholder="确认密码..." required="">
+							<input type="email" name="email" placeholder="电子邮箱..." required="">
+							<input type="text" name="phone" placeholder="手机号码..." required="">
+							<input type="submit" value="注   册">
+						</form>
+					</div>
+				</div>
+				<div style="width: 10vw;height:3vh;">
+					<a href="#small-dialog" class="popup-with-zoom-anim" id="toRegister">
+						已有账号？去登录</a>
+				</div>
+			</div>
+		</div>						
+		<!--pop-up-grid-->
+		
+		<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+																							
+		});
+		</script>
+		
+<!-- required-js-files-->
+							<link href="css/owl.carousel.css" rel="stylesheet">
+							    <script src="js/owl.carousel.js"></script>
+							        <script>
+							    $(document).ready(function() {
+							      $("#owl-demo").owlCarousel({
+							        items :3,
+									itemsDesktop : [768,2],
+									itemsDesktopSmall : [414,1],
+							        lazyLoad : true,
+							        autoPlay : true,
+							        navigation :true,
+									
+							        navigationText :  false,
+							        pagination : true,
+									
+							      });
+								  
+							    });
+							    </script>
+								 <!--//required-js-files-->
+
+
+<!-- /circle-->
+	 <script type="text/javascript" src="js/circles.js"></script>
+					         <script>
+								var colors = [
+										['none', '#fd9426'], ['#fafafa', '#fc3158'],['#fafafa', '#53d769'], ['#fafafa', '#147efb']
+									];
+								for (var i = 1; i <= 7; i++) {
+									var child = document.getElementById('circles-' + i),
+										percentage = 30 + (i * 10);
+										
+									Circles.create({
+										id:         child.id,
+										percentage: percentage,
+										radius:     80,
+										width:      13,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[i - 1]
+									});
+								}
+						
+				</script>
+	<!-- //circle -->
+
+<script src="js/SmoothScroll.min.js"></script>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+
+<!-- move to top-js-files -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+<!-- //move to top-js-files -->
+
+
+<script type="text/javascript" src="js/bootstrap.js"></script><!-- bootstrap js file -->
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+.hh{
+	list-style-type: none;
+}
+#a{
+	color: black;
+	margin-left: 3px;
+}
+#a:hover{
+	color: #ff69c6;
+}
+#rowlist{
+	width: 100%;
+	height:220px;
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	overflow-x:scroll;
+	/* flex-wrap: nowrap; */
+}
+#pic-act{
+	width: 240px;
+	height:150px;
+}
+#txt-a{
+	width:240px;
+	background-color:white;
+
+}
+#txt-a:hover{
+	color: lightblue;
+}
+.rowtitle{
+	width: 100%;
+	height: 30px;
+	float: left;
+	margin-left:5px;
+	font-size: 20px;
+}
+.rowtree{
+	width:240px;
+	height:171px;
+	border:0px solid black;
+	margin:0px 10px;
+}
+
+.hh{
+	width:500px;
+	height:200px;
+	padding:0;
+	display:flex;
+	/* align-items: center; */
+	flex-direction: column;
+	justify-content:flex-start;
+}
