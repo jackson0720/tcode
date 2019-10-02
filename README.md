@@ -4,3 +4,6 @@
 
 运行环境：Apache Tomcat v8.5+Eclipse IDE 2019-3
 所用数据库：SQL Server 2008 R2
+
+
+项目演示地址：http://47.95.205.151:8080/tco/index.html
