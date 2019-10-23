@@ -7,3 +7,8 @@
 
 
 项目演示地址：http://47.95.205.151:8080/tco/index.html
+
+
+Project Author:jackson0720(GitHub同名)、	FlameAidan_(GitHub同名)、安华萧潇(腾讯云开发者平台同名)、Robbin(腾讯云开发者平台同名)、小伞（QQ同名）
+
+项目作者:jackson0720(GitHub同名)、	FlameAidan_(GitHub同名)、安华萧潇(腾讯云开发者平台同名)、Robbin(腾讯云开发者平台同名)、小伞（QQ同名）
