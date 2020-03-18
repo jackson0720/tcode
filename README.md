@@ -6,7 +6,7 @@
 所用数据库：SQL Server 2008 R2
 
 
-项目演示地址：http://47.95.205.151:8080/tcode/index.html
+项目演示地址：http://134.175.239.108:8080/tcode/index.html
 
 
 Project Author:jackson0720(GitHub同名)、	FlameAidan_(GitHub同名)、安华萧潇(腾讯云开发者平台同名)、Robbin(腾讯云开发者平台同名)、HK416Mywife（GitHub同名）
